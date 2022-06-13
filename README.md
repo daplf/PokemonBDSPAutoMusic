@@ -4,6 +4,8 @@ A tool to auto play Pokemon BDSP songs depending on where you are currently in t
 
 The tool uses OpenCV for the image recognition stuff.
 
+Here's a small demo showing how it works: https://www.youtube.com/watch?v=H779VGMMtD0
+
 ## Motivation
 
 If you've ever done/watched a Pokemon BDSP speedrun, you've certainly noticed that the game is a lot faster with the Background Music option set to 0. This unfortunately makes the speedrun very dull. This tool tries to solve this issue by playing BDSP songs based on the output of your capture card.
@@ -56,3 +58,7 @@ battle-wild=C:\\path\\to\\battle-wild.wav
 lake=C:\\path\\to\\lake.wav
 choose-starter=C:\\path\\to\\choose-starter.wav
 ```
+
+## Authors
+
+[Furyst](https://www.speedrun.com/user/Furyst)
