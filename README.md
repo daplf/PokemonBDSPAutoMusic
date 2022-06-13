@@ -1,6 +1,6 @@
 # PokemonBDSPAutoMusic
 
-A tool to auto play Pokemon BDSP songs depending on where you are currently in the game. It requires a capture card. The tool consumes the capture card input and tries to understand where you are in the game based on what's on screen.
+A tool to auto play Pokemon BDSP songs depending on where you are currently in the game. It requires a capture card. The tool consumes the capture card output and tries to understand where you are in the game based on what's on screen.
 
 The tool uses OpenCV for the image recognition stuff.
 
@@ -36,7 +36,7 @@ Where:
 - `device-width` - The width of your capturing device (e.g., 1920).
 - `device-height` - The height of your capturing device (e.g., 1080).
 - `game-width` - The width of your game window (e.g., 1920). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#Setting_up_a_virtual_camera)).
-- `game-height` - The width of your game window (e.g., 1080). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#Setting_up_a_virtual_camera)).
+- `game-height` - The height of your game window (e.g., 1080). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#Setting_up_a_virtual_camera)).
 - `path-to-song-manifest` - The file system path to your song manifest (see [Song Manifest](##Song_manifest)).
 
 ## Setting up a Virtual Camera
