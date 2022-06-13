@@ -1,13 +1,14 @@
 package daplf.pokemon.bdsp.automusic.image;
 
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Paths;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.io.IOUtils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.core.MatOfByte;
 import org.opencv.core.Size;
 import org.opencv.core.Core.MinMaxLocResult;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -46,15 +47,15 @@ public class ImageUtils {
 
         if (res == null) {
             try {
-                URL resource = ImageUtils.class.getClassLoader().getResource(resourceName);
-                String path = Paths.get(resource.toURI()).toAbsolutePath().toString();
+                InputStream resourceStream = ImageUtils.class.getClassLoader().getResourceAsStream(resourceName);
+                byte[] imageBytes = IOUtils.toByteArray(resourceStream);
 
-                res = Imgcodecs.imread(path);
+                res = Imgcodecs.imdecode(new MatOfByte(imageBytes), Imgcodecs.IMREAD_UNCHANGED);
                 Imgproc.resize(res, res, new Size(res.width() * ConfigurationProperties.IMAGE_WIDTH_FACTOR, res.height() * ConfigurationProperties.IMAGE_HEIGHT_FACTOR));
                 
                 images.put(resourceName, res);
-            } catch (final URISyntaxException ex) {
-                log.error("Error parsing the resource URL. This is most certainly a bug: {}", ex.getMessage());
+            } catch (final IOException ex) {
+                log.error("Error reading an image resource: {}", ex.getMessage());
             }
         }
 
