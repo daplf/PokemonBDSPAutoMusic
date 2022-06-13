@@ -35,9 +35,9 @@ Where:
 - `device-number` - The number of your capturing device. Anything your computer recognizes as a camera (this includes capture cards) is given an index (starting with 0). You can technically find the number of your capture card using other tools (like ffmpeg) but you can just try to run the tool with 0, 1, 2, etc until it works. Note that if you use a virtual camera, the index will be different than the one used for the capture card.
 - `device-width` - The width of your capturing device (e.g., 1920).
 - `device-height` - The height of your capturing device (e.g., 1080).
-- `game-width` - The width of your game window (e.g., 1920). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#Setting_up_a_virtual_camera)).
-- `game-height` - The height of your game window (e.g., 1080). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#Setting_up_a_virtual_camera)).
-- `path-to-song-manifest` - The file system path to your song manifest (see [Song Manifest](##Song_manifest)).
+- `game-width` - The width of your game window (e.g., 1920). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
+- `game-height` - The height of your game window (e.g., 1080). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
+- `path-to-song-manifest` - The file system path to your song manifest (see [Song Manifest](#song-manifest)).
 
 ## Setting up a Virtual Camera
 
