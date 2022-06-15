@@ -7,24 +7,22 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
+import daplf.pokemon.bdsp.automusic.game.state.towns.JubilifeCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SandgemTownState;
-import daplf.pokemon.bdsp.automusic.game.state.towns.TwinleafTownState;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
-public class Route201State extends FlyableState {
+public class Route202State extends FlyableState {
 
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if ((fadedIn() && ImageUtils.isBlackScreen(frame)) || StateUtils.matchAreaTitle(frame, StateIndicators.TWINLEAF_TOWN) >= 0.95) {
-            setNextState(new TwinleafTownState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VERITY_LAKEFRONT) >= 0.95) {
-            setNextState(new VerityLakefrontState());
-        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
-            setNextState(new BattleGrassState(() -> new Route201State()));
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
             setNextState(new SandgemTownState());
+        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+            setNextState(new BattleGrassState(() -> new Route202State()));
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.JUBILIFE_CITY) >= 0.95) {
+            setNextState(new JubilifeCityState());
         }
     }
 

@@ -6,23 +6,23 @@ import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
-import daplf.pokemon.bdsp.automusic.image.ImageUtils;
+import daplf.pokemon.bdsp.automusic.game.state.towns.SunyshoreCityState;
 
-public class VerityLakefrontState extends FlyableState {
+public class Route222State extends FlyableState {
 
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
-
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
-            setNextState(new LakeVerityState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.95) {
-            setNextState(new Route201State());
+        
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.VALOR_LAKEFRONT) >= 0.95) {
+            setNextState(new ValorLakefrontState());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SUNYSHORE_CITY) >= 0.95) {
+            setNextState(new SunyshoreCityState());
         }
     }
 
     @Override
     public Song getSong() {
-        return Song.ROUTE_201_DAY;
+        return Song.ROUTE_209_DAY;
     }
 }

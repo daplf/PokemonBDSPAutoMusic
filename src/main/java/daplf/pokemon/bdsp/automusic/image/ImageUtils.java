@@ -9,6 +9,7 @@ import org.apache.commons.io.IOUtils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
+import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.core.Core.MinMaxLocResult;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -42,6 +43,10 @@ public class ImageUtils {
         return Core.countNonZero(imageGray) == 0;
     }
 
+    public static boolean isWhiteScreen(final Mat image) {
+        return Core.mean(image).equals(new Scalar(254, 254, 254, 0));
+    }
+
     public static Mat getImageResource(final String resourceName) {
         Mat res = images.get(resourceName);
 
@@ -60,5 +65,14 @@ public class ImageUtils {
         }
 
         return res;
+    }
+
+    public static Mat getProportionalSubmat(final Mat mat, final int rowStart, final int rowEnd, final int colStart, final int colEnd) {
+        return mat.submat(
+            (int) (rowStart * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
+            (int) (rowEnd * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
+            (int) (colStart * ConfigurationProperties.IMAGE_WIDTH_FACTOR),
+            (int) (colEnd * ConfigurationProperties.IMAGE_WIDTH_FACTOR)
+        );
     }
 }

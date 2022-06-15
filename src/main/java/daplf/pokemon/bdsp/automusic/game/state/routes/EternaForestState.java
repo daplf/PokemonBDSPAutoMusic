@@ -4,25 +4,25 @@ import org.opencv.core.Mat;
 
 import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
-import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
+import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
-public class VerityLakefrontState extends FlyableState {
+public class EternaForestState extends FlyableState {
 
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
-            setNextState(new LakeVerityState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.95) {
-            setNextState(new Route201State());
+        if (fadedIn() && ImageUtils.isWhiteScreen(frame)) {
+            setNextState(new Route205State());
+        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+            setNextState(new BattleGrassState(() -> new EternaForestState()));
         }
     }
 
     @Override
     public Song getSong() {
-        return Song.ROUTE_201_DAY;
+        return Song.ETERNA_FOREST;
     }
 }

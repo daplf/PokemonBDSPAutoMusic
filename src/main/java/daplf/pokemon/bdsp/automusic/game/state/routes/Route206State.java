@@ -6,23 +6,23 @@ import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
-import daplf.pokemon.bdsp.automusic.image.ImageUtils;
+import daplf.pokemon.bdsp.automusic.game.state.towns.EternaCityState;
 
-public class VerityLakefrontState extends FlyableState {
+public class Route206State extends FlyableState {
 
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
-            setNextState(new LakeVerityState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.95) {
-            setNextState(new Route201State());
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ETERNA_CITY) >= 0.95) {
+            setNextState(new EternaCityState());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_207) >= 0.99) {
+            setNextState(new Route207State());
         }
     }
 
     @Override
     public Song getSong() {
-        return Song.ROUTE_201_DAY;
+        return Song.ROUTE_206_DAY;
     }
 }
