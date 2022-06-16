@@ -19,7 +19,7 @@ public class Route205State extends FlyableState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.FLOAROMA_TOWN) >= 0.95) {
             setNextState(new FloaromaTownState());
-        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+        } else if (isBattleGrass(frame)) {
             setNextState(new BattleGrassState(() -> new Route205State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VALLEY_WINDWORKS) >= 0.95) {
             setNextState(new ValleyWindworksState());

@@ -21,7 +21,7 @@ public class Route201State extends FlyableState {
             setNextState(new TwinleafTownState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VERITY_LAKEFRONT) >= 0.95) {
             setNextState(new VerityLakefrontState());
-        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+        } else if (isBattleGrass(frame)) {
             setNextState(new BattleGrassState(() -> new Route201State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
             setNextState(new SandgemTownState());

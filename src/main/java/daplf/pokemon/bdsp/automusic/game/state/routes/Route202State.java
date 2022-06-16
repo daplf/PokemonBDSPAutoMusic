@@ -9,7 +9,6 @@ import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.JubilifeCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SandgemTownState;
-import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
 public class Route202State extends FlyableState {
 
@@ -19,7 +18,7 @@ public class Route202State extends FlyableState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
             setNextState(new SandgemTownState());
-        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+        } else if (isBattleGrass(frame)) {
             setNextState(new BattleGrassState(() -> new Route202State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.JUBILIFE_CITY) >= 0.95) {
             setNextState(new JubilifeCityState());

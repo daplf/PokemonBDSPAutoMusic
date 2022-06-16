@@ -17,7 +17,7 @@ public class ValleyWindworksState extends FlyableState {
 
         if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
             setNextState(new ValleyWindworksPowerplantState());
-        } else if (ImageUtils.matchTemplate(frame, StateIndicators.BATTLE_GRASS) >= 0.5) {
+        } else if (isBattleGrass(frame)) {
             setNextState(new BattleGrassState(() -> new ValleyWindworksState()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_205) >= 0.95) {
             setNextState(new Route205State());
