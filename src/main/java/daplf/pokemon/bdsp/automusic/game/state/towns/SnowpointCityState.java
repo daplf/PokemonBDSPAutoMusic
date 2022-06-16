@@ -6,9 +6,8 @@ import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.routes.AcuityLakefrontState;
-import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 
-public class SnowpointCityState extends FlyableState {
+public class SnowpointCityState extends TownState {
 
     @Override
     public void processFrame(final Mat frame) {

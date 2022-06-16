@@ -26,6 +26,8 @@ public class MusicManager {
         CHOOSE_STARTER,
         SANDGEM_TOWN_DAY,
         SANDGEM_TOWN_NIGHT,
+        POKEMON_CENTER_DAY,
+        POKEMON_CENTER_NIGHT,
         JUBILIFE_CITY_DAY,
         JUBILIFE_CITY_NIGHT,
         ROUTE_203_DAY,

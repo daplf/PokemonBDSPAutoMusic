@@ -22,6 +22,8 @@ public class StateIndicators {
 
     public static final Mat SANDGEM_TOWN = ImageUtils.getImageResource("sandgem-town.png");
 
+    public static final Mat POKEMON_CENTER_MONITOR = ImageUtils.getImageResource("pokemon-center-monitor.png");
+
     public static final Mat ROUTE_202 = ImageUtils.getImageResource("route-202.png");
 
     public static final Mat JUBILIFE_CITY = ImageUtils.getImageResource("jubilife-city.png");

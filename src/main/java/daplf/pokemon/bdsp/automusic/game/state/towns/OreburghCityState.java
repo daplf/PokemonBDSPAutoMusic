@@ -7,9 +7,8 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghGateState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route207State;
-import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 
-public class OreburghCityState extends FlyableState {
+public class OreburghCityState extends TownState {
 
     @Override
     public void processFrame(final Mat frame) {

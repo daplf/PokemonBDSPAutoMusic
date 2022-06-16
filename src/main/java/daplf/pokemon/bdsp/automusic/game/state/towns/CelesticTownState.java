@@ -7,9 +7,8 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route210State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route211State;
-import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 
-public class CelesticTownState extends FlyableState {
+public class CelesticTownState extends TownState {
 
     @Override
     public void processFrame(final Mat frame) {

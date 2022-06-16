@@ -17,7 +17,7 @@ public abstract class FlyableState extends State {
 
     private boolean isStaraptorBanner(final Mat frame) {
         return ImageUtils.matchTemplate(
-            ImageUtils.getProportionalSubmat(frame, 285, 785, 0, 1920), StateIndicators.STARAPTOR_BANNER
-        ) >= 0.65;
+            ImageUtils.getProportionalSubmat(frame, 285, 785, 700, 1200), StateIndicators.STARAPTOR_BANNER
+        ) >= 0.8;
     }
 }

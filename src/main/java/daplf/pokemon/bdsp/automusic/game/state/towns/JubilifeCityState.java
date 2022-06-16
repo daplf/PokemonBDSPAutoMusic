@@ -9,9 +9,8 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.Route202State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route203State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route204State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route218State;
-import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 
-public class JubilifeCityState extends FlyableState {
+public class JubilifeCityState extends TownState {
 
     @Override
     public void processFrame(final Mat frame) {
