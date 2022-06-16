@@ -28,6 +28,8 @@ public class MusicManager {
         SANDGEM_TOWN_NIGHT,
         POKEMON_CENTER_DAY,
         POKEMON_CENTER_NIGHT,
+        POKE_MART,
+        POKEMON_LAB,
         JUBILIFE_CITY_DAY,
         JUBILIFE_CITY_NIGHT,
         ROUTE_203_DAY,

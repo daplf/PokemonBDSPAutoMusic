@@ -52,6 +52,8 @@ public class App {
         songManifest.put(MusicManager.Song.SANDGEM_TOWN_NIGHT, properties.getProperty("sandgem-town-night"));
         songManifest.put(MusicManager.Song.POKEMON_CENTER_DAY, properties.getProperty("pokemon-center-day"));
         songManifest.put(MusicManager.Song.POKEMON_CENTER_NIGHT, properties.getProperty("pokemon-center-night"));
+        songManifest.put(MusicManager.Song.POKE_MART, properties.getProperty("poke-mart"));
+        songManifest.put(MusicManager.Song.POKEMON_LAB, properties.getProperty("pokemon-lab"));
         songManifest.put(MusicManager.Song.JUBILIFE_CITY_DAY, properties.getProperty("jubilife-city-day"));
         songManifest.put(MusicManager.Song.JUBILIFE_CITY_NIGHT, properties.getProperty("jubilife-city-night"));
         songManifest.put(MusicManager.Song.ROUTE_203_DAY, properties.getProperty("route-203-day"));

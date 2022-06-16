@@ -22,7 +22,7 @@ import daplf.pokemon.bdsp.automusic.game.state.towns.VeilstoneCityState;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class PokemonCenterState extends State {
+public class PokeMartState extends State {
 
     @Override
     public void processFrame(final Mat frame) {
@@ -57,6 +57,6 @@ public class PokemonCenterState extends State {
 
     @Override
     public Song getSong() {
-        return Song.POKEMON_CENTER_DAY;
+        return Song.POKE_MART;
     }
 }
