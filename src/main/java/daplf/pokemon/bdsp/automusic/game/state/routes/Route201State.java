@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.routes;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
@@ -29,7 +29,7 @@ public class Route201State extends FlyableState {
     }
 
     @Override
-    public Song getSong() {
-        return Song.ROUTE_201_DAY;
+    public Songs getSong() {
+        return Songs.ROUTE_201_DAY;
     }
 }

@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.buildings;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
@@ -20,7 +20,7 @@ public class PokemonLabState extends State {
     }
 
     @Override
-    public Song getSong() {
-        return Song.POKEMON_LAB;
+    public Songs getSong() {
+        return Songs.POKEMON_LAB;
     }
 }

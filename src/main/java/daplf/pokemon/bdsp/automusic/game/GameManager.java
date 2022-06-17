@@ -7,32 +7,37 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.game.state.towns.TwinleafTownState;
 import daplf.pokemon.bdsp.automusic.video.VideoCaptureManager;
+import lombok.Getter;
 
 public class GameManager {
 
     private VideoCaptureManager videoCaptureManager;
 
-    private MusicManager musicManager;
-
+    @Getter
     private State currentState = new TwinleafTownState();
 
-    public GameManager(final VideoCaptureManager videoCaptureManager, final MusicManager musicManager) throws IOException {
+    public GameManager(final VideoCaptureManager videoCaptureManager) throws IOException {
         this.videoCaptureManager = videoCaptureManager;
-        this.musicManager = musicManager;
     }
 
     public void play() {
-        musicManager.play(currentState.getSong());
-
         while (true) {
             Mat currentFrame = videoCaptureManager.getCurrentFrame();
 
             if (currentFrame != null) {
-                currentState.processFrame(currentFrame);
-                currentState = currentState.getNextState();
+                synchronized(currentState) {
+                    currentState.processFrame(currentFrame);
+                    currentState = currentState.getNextState();
+                }
 
-                musicManager.play(currentState.getSong());
+                currentFrame.release();
             }
+        }
+    }
+
+    public void setCurrentState(final State newState) {
+        synchronized(currentState) {
+            currentState = newState;
         }
     }
 }

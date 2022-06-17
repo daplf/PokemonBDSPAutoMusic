@@ -22,14 +22,16 @@ public abstract class TownState extends FlyableState {
     }
 
     private boolean isPokemonCenter(final Mat frame) {
-        return ImageUtils.matchTemplate(
-            ImageUtils.getProportionalSubmat(frame, 0, 250, 700, 1300), StateIndicators.POKEMON_CENTER_MONITOR
-        ) >= 0.9;
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 250, 700, 1300);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.POKEMON_CENTER_MONITOR) >= 0.9;
+        submat.release();
+        return result;
     }
 
     private boolean isPokeMart(final Mat frame) {
-        return ImageUtils.matchTemplate(
-            ImageUtils.getProportionalSubmat(frame, 130, 340, 1000, 1200), StateIndicators.POKE_MART_REGISTER
-        ) >= 0.9;
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 130, 340, 1000, 1200);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.POKE_MART_REGISTER) >= 0.9;
+        submat.release();
+        return result;
     }
 }

@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.routes;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
@@ -21,7 +21,7 @@ public class LakeValorState extends FlyableState {
     }
 
     @Override
-    public Song getSong() {
-        return Song.GALACTIC_ETERNA_BUILDING;
+    public Songs getSong() {
+        return Songs.GALACTIC_ETERNA_BUILDING;
     }
 }

@@ -23,6 +23,7 @@ public class AppArgumentsParser {
         options.addOption(Option.builder("gw").longOpt("game-width").desc("the width of the game inside the output device").hasArg(true).required(false).build());
         options.addOption(Option.builder("gh").longOpt("game-height").desc("the height of the game inside the output device").hasArg(true).required(false).build());
         options.addOption(Option.builder("s").longOpt("song-manifest").desc("the song manifest path").hasArg(true).required(true).build());
+        options.addOption(Option.builder("st").longOpt("song-manifest-type").desc("the song manifest type (local/youtube)").hasArg(true).required(false).build());
     }
 
     public AppArguments parseArguments(final String[] args) {
@@ -35,8 +36,9 @@ public class AppArgumentsParser {
             int gameWidth = Integer.parseInt(line.getOptionValue("gw", String.valueOf(width)));
             int gameHeight = Integer.parseInt(line.getOptionValue("gh", String.valueOf(height)));
             String songManifestPath = line.getOptionValue("s");
+            String songManifestType = line.getOptionValue("st", "youtube");
 
-            return new AppArguments(device, width, height, gameWidth, gameHeight, songManifestPath);
+            return new AppArguments(device, width, height, gameWidth, gameHeight, songManifestPath, songManifestType);
         } catch (final ParseException ex) {
             throw new RuntimeException("Failed to parse program arguments: " + ex.getMessage());
         }

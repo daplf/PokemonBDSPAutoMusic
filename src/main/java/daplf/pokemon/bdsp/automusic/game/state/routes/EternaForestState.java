@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.routes;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
@@ -21,7 +21,7 @@ public class EternaForestState extends FlyableState {
     }
 
     @Override
-    public Song getSong() {
-        return Song.ETERNA_FOREST;
+    public Songs getSong() {
+        return Songs.ETERNA_FOREST;
     }
 }

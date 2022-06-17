@@ -18,4 +18,6 @@ public class AppArguments {
     private final int gameHeight;
 
     private final String songManifestPath;
+
+    private final String songManifestType;
 }

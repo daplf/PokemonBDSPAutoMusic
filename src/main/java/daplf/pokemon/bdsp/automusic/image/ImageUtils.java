@@ -31,7 +31,9 @@ public class ImageUtils {
             Imgproc.matchTemplate(image, template, result, Imgproc.TM_CCOEFF_NORMED);
 
             MinMaxLocResult mmr = Core.minMaxLoc(result);
-            return mmr.maxVal;
+            double matchResult = mmr.maxVal;
+            result.release();
+            return matchResult;
         } else {
             return 0.0;
         }
@@ -40,7 +42,9 @@ public class ImageUtils {
     public static boolean isBlackScreen(final Mat image) {
         Mat imageGray = new Mat();
         Imgproc.cvtColor(image, imageGray, Imgproc.COLOR_BGR2GRAY);
-        return Core.countNonZero(imageGray) == 0;
+        boolean result = Core.countNonZero(imageGray) == 0;
+        imageGray.release();
+        return result;
     }
 
     public static boolean isWhiteScreen(final Mat image) {

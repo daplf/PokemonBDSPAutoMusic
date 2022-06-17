@@ -11,6 +11,9 @@ public abstract class StateUtils {
     }
 
     public static double matchAreaTitle(final Mat frame, final Mat template) {
-        return ImageUtils.matchTemplate(getAreaTitleSubmatrix(frame), template);
+        Mat submat = getAreaTitleSubmatrix(frame);
+        double result = ImageUtils.matchTemplate(submat, template);
+        submat.release();
+        return result;
     }
 }

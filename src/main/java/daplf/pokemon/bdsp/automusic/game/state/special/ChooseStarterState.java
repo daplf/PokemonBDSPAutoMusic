@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.special;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
@@ -19,7 +19,7 @@ public class ChooseStarterState extends State {
     }
 
     @Override
-    public Song getSong() {
-        return Song.CHOOSE_STARTER;
+    public Songs getSong() {
+        return Songs.CHOOSE_STARTER;
     }
 }

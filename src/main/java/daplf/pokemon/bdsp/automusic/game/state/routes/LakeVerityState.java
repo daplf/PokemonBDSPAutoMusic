@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.routes;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.special.ChooseStarterState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
@@ -22,8 +22,8 @@ public class LakeVerityState extends FlyableState {
     }
 
     @Override
-    public Song getSong() {
-        return Song.LAKE;
+    public Songs getSong() {
+        return Songs.LAKE;
     }
 
     private boolean isChooseStarter(final Mat frame) {

@@ -2,7 +2,7 @@ package daplf.pokemon.bdsp.automusic.game.state.special;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
@@ -64,7 +64,7 @@ public class FlyState extends FlyableState {
     }
 
     @Override
-    public Song getSong() {
+    public Songs getSong() {
         return previousState.getSong();
     }
 }

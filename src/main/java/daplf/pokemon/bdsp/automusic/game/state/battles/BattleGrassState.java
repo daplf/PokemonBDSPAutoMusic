@@ -4,7 +4,7 @@ import java.util.function.Supplier;
 
 import org.opencv.core.Mat;
 
-import daplf.pokemon.bdsp.automusic.game.MusicManager.Song;
+import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
@@ -24,7 +24,7 @@ public class BattleGrassState extends State {
     }
 
     @Override
-    public Song getSong() {
-        return Song.BATTLE_WILD;
+    public Songs getSong() {
+        return Songs.BATTLE_WILD;
     }
 }
