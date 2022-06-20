@@ -14,6 +14,7 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.LakeValorState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeVerityState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.MountCoronetState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghGateState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghMineState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.PokemonLeagueState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.RavagedPathState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route201State;
@@ -106,6 +107,7 @@ public class GUI extends Application {
 		new MapLocationButton("Route\n203", Route203State::new, 250, 660, 60, 40),
 		new MapLocationButton("Oreburgh\nGate", OreburghGateState::new, 320, 660, 80, 40),
 		new MapLocationButton("Oreburgh\nCity", OreburghCityState::new, 410, 660, 70, 40),
+		new MapLocationButton("Oreburgh\nMine", OreburghMineState::new, 410, 710, 70, 40),
 		new MapLocationButton("Route\n204", Route204State::new, 175, 610, 60, 40),
 		new MapLocationButton("Ravaged\nPath", RavagedPathState::new, 170, 560, 70, 40),
 		new MapLocationButton("Floaroma\nTown", FloaromaTownState::new, 170, 510, 70, 40),

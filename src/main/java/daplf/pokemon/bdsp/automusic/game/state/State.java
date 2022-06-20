@@ -9,7 +9,7 @@ import lombok.Setter;
 
 public abstract class State {
 
-    private long startTime = System.currentTimeMillis();
+    protected long startTime = System.currentTimeMillis();
 
     @Setter(AccessLevel.PROTECTED)
     private State nextState = this;
@@ -32,6 +32,13 @@ public abstract class State {
         boolean sunsetResult = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GRASS_SUNSET) >= 0.8;
         submat.release();
         return dayResult || sunsetResult;
+    }
+
+    protected boolean isBattleCave(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 350, 750, 0, 1920);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_CAVE) >= 0.9;
+        submat.release();
+        return result;
     }
 
     protected boolean isBattleTrainer(final Mat frame) {

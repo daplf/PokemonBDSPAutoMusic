@@ -5,8 +5,8 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
-import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
-import daplf.pokemon.bdsp.automusic.game.state.battles.BattleTrainerState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.TrainerBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.JubilifeCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SandgemTownState;
@@ -20,11 +20,11 @@ public class Route202State extends FlyableState {
         if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
             setNextState(new SandgemTownState());
         } else if (isBattleGrass(frame)) {
-            setNextState(new BattleGrassState(() -> new Route202State()));
+            setNextState(new WildBattleState(() -> new Route202State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.JUBILIFE_CITY) >= 0.95) {
             setNextState(new JubilifeCityState());
         } else if (isBattleTrainer(frame)) {
-            setNextState(new BattleTrainerState(() -> new Route202State()));
+            setNextState(new TrainerBattleState(() -> new Route202State()));
         }
     }
 

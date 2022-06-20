@@ -5,7 +5,7 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
-import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.EternaCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.FloaromaTownState;
@@ -20,7 +20,7 @@ public class Route205State extends FlyableState {
         if (StateUtils.matchAreaTitle(frame, StateIndicators.FLOAROMA_TOWN) >= 0.95) {
             setNextState(new FloaromaTownState());
         } else if (isBattleGrass(frame)) {
-            setNextState(new BattleGrassState(() -> new Route205State()));
+            setNextState(new WildBattleState(() -> new Route205State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VALLEY_WINDWORKS) >= 0.95) {
             setNextState(new ValleyWindworksState());
         } else if (fadedIn() && ImageUtils.isBlackScreen(frame)) {

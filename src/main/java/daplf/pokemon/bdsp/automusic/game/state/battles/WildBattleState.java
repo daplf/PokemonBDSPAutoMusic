@@ -7,14 +7,12 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
+import lombok.RequiredArgsConstructor;
 
-public class BattleTrainerState extends State {
+@RequiredArgsConstructor
+public class WildBattleState extends State {
 
-    private Supplier<State> postBattleStateSupplier;
-
-    public BattleTrainerState(final Supplier<State> postBattleStateSupplier) {
-        this.postBattleStateSupplier = postBattleStateSupplier;
-    }
+    private final Supplier<State> postBattleStateSupplier;
 
     @Override
     public void processFrame(final Mat frame) {
@@ -25,6 +23,6 @@ public class BattleTrainerState extends State {
 
     @Override
     public Songs getSong() {
-        return Songs.BATTLE_TRAINER;
+        return Songs.BATTLE_WILD;
     }
 }

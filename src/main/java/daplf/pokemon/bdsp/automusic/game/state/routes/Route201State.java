@@ -5,7 +5,7 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
-import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SandgemTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.TwinleafTownState;
@@ -22,7 +22,7 @@ public class Route201State extends FlyableState {
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VERITY_LAKEFRONT) >= 0.95) {
             setNextState(new VerityLakefrontState());
         } else if (isBattleGrass(frame)) {
-            setNextState(new BattleGrassState(() -> new Route201State()));
+            setNextState(new WildBattleState(() -> new Route201State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SANDGEM_TOWN) >= 0.95) {
             setNextState(new SandgemTownState());
         }

@@ -6,6 +6,7 @@ import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghGateState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghMineState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route207State;
 
 public class OreburghCityState extends TownState {
@@ -18,6 +19,8 @@ public class OreburghCityState extends TownState {
             setNextState(new OreburghGateState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_207) >= 0.95) {
             setNextState(new Route207State());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.OREBURGH_MINE) >= 0.95) {
+            setNextState(new OreburghMineState());
         }
     }
 

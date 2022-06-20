@@ -3,7 +3,7 @@ package daplf.pokemon.bdsp.automusic.game.state.routes;
 import org.opencv.core.Mat;
 
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
-import daplf.pokemon.bdsp.automusic.game.state.battles.BattleGrassState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
@@ -16,7 +16,7 @@ public class EternaForestState extends FlyableState {
         if (fadedIn() && ImageUtils.isWhiteScreen(frame)) {
             setNextState(new Route205State());
         } else if (isBattleGrass(frame)) {
-            setNextState(new BattleGrassState(() -> new EternaForestState()));
+            setNextState(new WildBattleState(() -> new EternaForestState()));
         }
     }
 
