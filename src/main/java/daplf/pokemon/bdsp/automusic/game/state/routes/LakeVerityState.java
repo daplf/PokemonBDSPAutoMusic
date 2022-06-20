@@ -27,7 +27,9 @@ public class LakeVerityState extends FlyableState {
     }
 
     private boolean isChooseStarter(final Mat frame) {
-        return ImageUtils.matchTemplate(frame, StateIndicators.CHOOSE_STARTER_DAY) >= 0.95
-               || ImageUtils.matchTemplate(frame, StateIndicators.CHOOSE_STARTER_NIGHT) >= 0.95;
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 370, 1080, 1300, 1920);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.CHOOSE_STARTER_TREE_DAY) >= 0.9;
+        submat.release();
+        return result;
     }
 }

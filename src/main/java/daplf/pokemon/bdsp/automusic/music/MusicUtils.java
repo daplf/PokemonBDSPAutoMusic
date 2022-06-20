@@ -31,6 +31,7 @@ public class MusicUtils {
         songManifest.put(Songs.POKEMON_CENTER_NIGHT, properties.getProperty("pokemon-center-night"));
         songManifest.put(Songs.POKE_MART, properties.getProperty("poke-mart"));
         songManifest.put(Songs.POKEMON_LAB, properties.getProperty("pokemon-lab"));
+        songManifest.put(Songs.BATTLE_TRAINER, properties.getProperty("battle-trainer"));
         songManifest.put(Songs.JUBILIFE_CITY_DAY, properties.getProperty("jubilife-city-day"));
         songManifest.put(Songs.JUBILIFE_CITY_NIGHT, properties.getProperty("jubilife-city-night"));
         songManifest.put(Songs.ROUTE_203_DAY, properties.getProperty("route-203-day"));

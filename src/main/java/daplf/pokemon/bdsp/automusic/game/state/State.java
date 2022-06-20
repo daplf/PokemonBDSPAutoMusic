@@ -28,7 +28,15 @@ public abstract class State {
 
     protected boolean isBattleGrass(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 496, 0, 1920);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GRASS) >= 0.8;
+        boolean dayResult = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GRASS_DAY) >= 0.8;
+        boolean sunsetResult = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GRASS_SUNSET) >= 0.8;
+        submat.release();
+        return dayResult || sunsetResult;
+    }
+
+    protected boolean isBattleTrainer(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 200, 430, 0, 1000);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_TRAINER_POKEBALL_RED) >= 0.9;
         submat.release();
         return result;
     }

@@ -12,13 +12,13 @@ public class StateIndicators {
 
     public static final Mat VERITY_LAKEFRONT = ImageUtils.getImageResource("verity-lakefront.png");
 
-    public static final Mat CHOOSE_STARTER_DAY = ImageUtils.getImageResource("choose-starter-day.png");
-
-    public static final Mat CHOOSE_STARTER_NIGHT = ImageUtils.getImageResource("choose-starter-night.png");
+    public static final Mat CHOOSE_STARTER_TREE_DAY = ImageUtils.getImageResource("choose-starter-tree-day.png");
 
     public static final Mat FIRST_FIGHT = ImageUtils.getImageResource("first-fight.png");
 
-    public static final Mat BATTLE_GRASS = ImageUtils.getImageResource("battle-grass.png");
+    public static final Mat BATTLE_GRASS_DAY = ImageUtils.getImageResource("battle-grass-day.png");
+
+    public static final Mat BATTLE_GRASS_SUNSET = ImageUtils.getImageResource("battle-grass-sunset.png");
 
     public static final Mat SANDGEM_TOWN = ImageUtils.getImageResource("sandgem-town.png");
 
@@ -28,7 +28,11 @@ public class StateIndicators {
 
     public static final Mat PROFESSOR_ROWAN = ImageUtils.getImageResource("professor-rowan.png");
 
+    public static final Mat POKEMON_LAB = ImageUtils.getImageResource("pokemon-lab.png");
+
     public static final Mat ROUTE_202 = ImageUtils.getImageResource("route-202.png");
+
+    public static final Mat BATTLE_TRAINER_POKEBALL_RED = ImageUtils.getImageResource("battle-trainer-pokeball-red.png");
 
     public static final Mat JUBILIFE_CITY = ImageUtils.getImageResource("jubilife-city.png");
 
