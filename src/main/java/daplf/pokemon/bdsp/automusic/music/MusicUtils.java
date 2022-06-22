@@ -40,6 +40,8 @@ public class MusicUtils {
         songManifest.put(Songs.OREBURGH_GATE, properties.getProperty("oreburgh-gate"));
         songManifest.put(Songs.OREBURGH_CITY_DAY, properties.getProperty("oreburgh-city-day"));
         songManifest.put(Songs.OREBURGH_CITY_NIGHT, properties.getProperty("oreburgh-city-night"));
+        songManifest.put(Songs.POKEMON_GYM, properties.getProperty("pokemon-gym"));
+        songManifest.put(Songs.BATTLE_GYM_LEADER, properties.getProperty("battle-gym-leader"));
         songManifest.put(Songs.FLOAROMA_TOWN_DAY, properties.getProperty("floaroma-town-day"));
         songManifest.put(Songs.FLOAROMA_TOWN_NIGHT, properties.getProperty("floaroma-town-night"));
         songManifest.put(Songs.ROUTE_205_DAY, properties.getProperty("route-205-day"));

@@ -48,6 +48,12 @@ public class StateIndicators {
 
     public static final Mat OREBURGH_MINE = ImageUtils.getImageResource("oreburgh-mine.png");
 
+    public static final Mat ROARK_GYM_GUIDE_CUTSCENE = ImageUtils.getImageResource("roark-gym-guide-cutscene.png");
+
+    public static final Mat ROARK_GYM_GUIDE = ImageUtils.getImageResource("roark-gym-guide.png");
+
+    public static final Mat GYM_LEADER_BANNER = ImageUtils.getImageResource("gym-leader-banner.png");
+
     public static final Mat ROUTE_204 = ImageUtils.getImageResource("route-204.png");
 
     public static final Mat RAVAGED_PATH = ImageUtils.getImageResource("ravaged-path.png");
