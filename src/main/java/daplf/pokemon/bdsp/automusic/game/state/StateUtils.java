@@ -10,8 +10,19 @@ public abstract class StateUtils {
         return ImageUtils.getProportionalSubmat(frame, 0, 140, 0, 900);
     }
 
+    public static Mat getNameTagSubmatrix(final Mat frame) {
+        return ImageUtils.getProportionalSubmat(frame, 800, 875, 385, 860);
+    }
+
     public static double matchAreaTitle(final Mat frame, final Mat template) {
         Mat submat = getAreaTitleSubmatrix(frame);
+        double result = ImageUtils.matchTemplate(submat, template);
+        submat.release();
+        return result;
+    }
+
+    public static double matchNameTag(final Mat frame, final Mat template) {
+        Mat submat = getNameTagSubmatrix(frame);
         double result = ImageUtils.matchTemplate(submat, template);
         submat.release();
         return result;

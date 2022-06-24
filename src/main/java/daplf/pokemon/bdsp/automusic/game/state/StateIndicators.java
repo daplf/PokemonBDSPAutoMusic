@@ -54,11 +54,15 @@ public class StateIndicators {
 
     public static final Mat GYM_LEADER_BANNER = ImageUtils.getImageResource("gym-leader-banner.png");
 
+    public static final Mat PROFESSOR_ROWAN_JUBILIFE = ImageUtils.getImageResource("professor-rowan-jubilife.png");
+
     public static final Mat ROUTE_204 = ImageUtils.getImageResource("route-204.png");
 
     public static final Mat RAVAGED_PATH = ImageUtils.getImageResource("ravaged-path.png");
 
     public static final Mat FLOAROMA_TOWN = ImageUtils.getImageResource("floaroma-town.png");
+
+    public static final Mat FLOAROMA_EXCLAMATION_MARKS = ImageUtils.getImageResource("floaroma-exclamation-marks.png");
 
     public static final Mat ROUTE_205 = ImageUtils.getImageResource("route-205.png");
 
