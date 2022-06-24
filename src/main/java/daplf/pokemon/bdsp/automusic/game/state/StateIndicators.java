@@ -80,6 +80,10 @@ public class StateIndicators {
 
     public static final Mat GARDENIA_GYM_WALL = ImageUtils.getImageResource("gardenia-gym-wall.png");
 
+    public static final Mat ETERNA_GALACTIC_BUILDING_SHELF = ImageUtils.getImageResource("eterna-galactic-building-shelf.png");
+
+    public static final Mat BATTLE_GALACTIC = ImageUtils.getImageResource("battle-galactic.png");
+
     public static final Mat ROUTE_206 = ImageUtils.getImageResource("route-206.png");
 
     public static final Mat ROUTE_207 = ImageUtils.getImageResource("route-207.png");
