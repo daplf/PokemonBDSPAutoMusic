@@ -96,6 +96,10 @@ public class StateIndicators {
 
     public static final Mat ROUTE_209 = ImageUtils.getImageResource("route-209.png");
 
+    public static final Mat LOST_TOWER_GRAVE = ImageUtils.getImageResource("lost-tower-grave.png");
+
+    public static final Mat LOST_TOWER = ImageUtils.getImageResource("lost-tower.png");
+
     public static final Mat SOLACEON_TOWN = ImageUtils.getImageResource("solaceon-town.png");
 
     public static final Mat ROUTE_210 = ImageUtils.getImageResource("route-210.png");
@@ -103,6 +107,12 @@ public class StateIndicators {
     public static final Mat ROUTE_215 = ImageUtils.getImageResource("route-215.png");
 
     public static final Mat VEILSTONE_CITY = ImageUtils.getImageResource("veilstone-city.png");
+
+    public static final Mat VEILSTONE_DEPARTMENT_STORE_SIGN = ImageUtils.getImageResource("veilstone-department-store-sign.png");
+
+    public static final Mat MAYLENE_GYM_BLACK_BELT = ImageUtils.getImageResource("maylene-gym-black-belt.png");
+
+    public static final Mat MAYLENE_GYM_GUIDE = ImageUtils.getImageResource("maylene-gym-guide.png");
 
     public static final Mat ROUTE_214 = ImageUtils.getImageResource("route-214.png");
 
