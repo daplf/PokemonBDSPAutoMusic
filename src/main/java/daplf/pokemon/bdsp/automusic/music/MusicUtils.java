@@ -47,6 +47,7 @@ public class MusicUtils {
         songManifest.put(Songs.FLOAROMA_TOWN_NIGHT, properties.getProperty("floaroma-town-night"));
         songManifest.put(Songs.ROUTE_205_DAY, properties.getProperty("route-205-day"));
         songManifest.put(Songs.ROUTE_205_NIGHT, properties.getProperty("route-205-night"));
+        songManifest.put(Songs.BATTLE_GALACTIC_COMMANDER, properties.getProperty("battle-galactic-commander"));
         songManifest.put(Songs.ETERNA_FOREST, properties.getProperty("eterna-forest"));
         songManifest.put(Songs.ETERNA_CITY_DAY, properties.getProperty("eterna-city-day"));
         songManifest.put(Songs.ETERNA_CITY_NIGHT, properties.getProperty("eterna-city-night"));

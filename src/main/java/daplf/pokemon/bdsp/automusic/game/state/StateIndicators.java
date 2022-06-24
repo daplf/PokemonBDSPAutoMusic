@@ -68,7 +68,17 @@ public class StateIndicators {
 
     public static final Mat VALLEY_WINDWORKS = ImageUtils.getImageResource("valley-windworks.png");
 
+    public static final Mat GRUNT_NAME_TAG = ImageUtils.getImageResource("grunt-name-tag.png");
+
+    public static final Mat BATTLE_GALACTIC_COMMANDER = ImageUtils.getImageResource("battle-galactic-commander.png");
+
+    public static final Mat VALLEY_WINDWORKS_SIGN = ImageUtils.getImageResource("valley-windworks-sign.png");
+
+    public static final Mat BATTLE_TRAINER_FOREST = ImageUtils.getImageResource("battle-trainer-forest.png");
+
     public static final Mat ETERNA_CITY = ImageUtils.getImageResource("eterna-city.png");
+
+    public static final Mat GARDENIA_GYM_WALL = ImageUtils.getImageResource("gardenia-gym-wall.png");
 
     public static final Mat ROUTE_206 = ImageUtils.getImageResource("route-206.png");
 

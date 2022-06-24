@@ -43,7 +43,14 @@ public abstract class State {
 
     protected boolean isBattleTrainer(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 200, 430, 0, 1000);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_TRAINER_POKEBALL_RED) >= 0.9;
+        boolean result = ImageUtils.matchTemplateSqDiff(submat, StateIndicators.BATTLE_TRAINER_POKEBALL_RED) <= 0.1;
+        submat.release();
+        return result;
+    }
+
+    protected boolean isBattleGalacticCommander(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 320, 750, 750, 1150);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GALACTIC_COMMANDER) >= 0.9;
         submat.release();
         return result;
     }

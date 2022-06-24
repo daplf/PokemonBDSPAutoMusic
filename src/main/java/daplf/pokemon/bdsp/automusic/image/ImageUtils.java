@@ -39,6 +39,20 @@ public class ImageUtils {
         }
     }
 
+    public static double matchTemplateSqDiff(final Mat image, final Mat template) {
+        if (image.width() >= template.width() && image.height() >= template.height()) {
+            Mat result = new Mat();
+            Imgproc.matchTemplate(image, template, result, Imgproc.TM_SQDIFF_NORMED);
+
+            MinMaxLocResult mmr = Core.minMaxLoc(result);
+            double matchResult = mmr.minVal;
+            result.release();
+            return matchResult;
+        } else {
+            return 1.0;
+        }
+    }
+
     public static boolean isBlackScreen(final Mat image) {
         Mat imageGray = new Mat();
         Imgproc.cvtColor(image, imageGray, Imgproc.COLOR_BGR2GRAY);
