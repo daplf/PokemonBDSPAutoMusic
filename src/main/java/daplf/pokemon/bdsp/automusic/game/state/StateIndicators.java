@@ -114,6 +114,8 @@ public class StateIndicators {
 
     public static final Mat MAYLENE_GYM_GUIDE = ImageUtils.getImageResource("maylene-gym-guide.png");
 
+    public static final Mat BATTLE_MAYLENE_GYM_BLACK_BELT = ImageUtils.getImageResource("battle-maylene-gym-black-belt.png");
+
     public static final Mat ROUTE_214 = ImageUtils.getImageResource("route-214.png");
 
     public static final Mat VALOR_LAKEFRONT = ImageUtils.getImageResource("valor-lakefront.png");
@@ -126,7 +128,19 @@ public class StateIndicators {
 
     public static final Mat PASTORIA_CITY = ImageUtils.getImageResource("pastoria-city.png");
 
+    public static final Mat WAKE_GYM_PLATE = ImageUtils.getImageResource("wake-gym-plate.png");
+
+    public static final Mat WAKE_GYM_GUIDE = ImageUtils.getImageResource("wake-gym-guide.png");
+
+    public static final Mat BATTLE_VALOR_LAKEFRONT_SUNSET = ImageUtils.getImageResource("battle-valor-lakefront-sunset.png");
+
+    public static final Mat BATTLE_VALOR_LAKEFRONT_NIGHT = ImageUtils.getImageResource("battle-valor-lakefront-night.png");
+
     public static final Mat CELESTIC_TOWN = ImageUtils.getImageResource("celestic-town.png");
+
+    public static final Mat FANTINA_GYM_ELEVATOR = ImageUtils.getImageResource("fantina-gym-elevator.png");
+
+    public static final Mat FANTINA_GYM_ELEVATOR_STRINGS = ImageUtils.getImageResource("fantina-gym-elevator-strings.png");
 
     public static final Mat ROUTE_218 = ImageUtils.getImageResource("route-218.png");
 

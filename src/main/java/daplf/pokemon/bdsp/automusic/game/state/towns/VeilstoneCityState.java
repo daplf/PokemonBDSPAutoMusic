@@ -5,6 +5,7 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.MayleneGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.VeilstoneDepartmentStoreState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route214State;
@@ -23,8 +24,10 @@ public class VeilstoneCityState extends TownState {
             setNextState(new Route214State());
         } else if (isDepartmentStore(frame)) {
             setNextState(new VeilstoneDepartmentStoreState());
-        } else if (isMayleneGym(frame)) {
+        } else if (isGym(frame)) {
             setNextState(new MayleneGymState());
+        } else if (isBattleGalacticGrunt(frame)) {
+            setNextState(new GalacticGruntBattleState(() -> new VeilstoneCityState()));
         }
     }
 
@@ -40,7 +43,7 @@ public class VeilstoneCityState extends TownState {
         return result;
     }
 
-    private boolean isMayleneGym(final Mat frame) {
+    private boolean isGym(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 175, 415, 880, 1060);
         boolean result = ImageUtils.matchTemplate(submat, StateIndicators.MAYLENE_GYM_BLACK_BELT) >= 0.8;
         submat.release();
