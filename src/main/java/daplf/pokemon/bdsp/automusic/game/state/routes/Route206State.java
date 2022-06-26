@@ -16,7 +16,7 @@ public class Route206State extends FlyableState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.ETERNA_CITY) >= 0.95) {
             setNextState(new EternaCityState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_207) >= 0.99) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_207) >= 0.95) {
             setNextState(new Route207State());
         }
     }

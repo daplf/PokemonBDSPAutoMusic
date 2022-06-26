@@ -17,7 +17,7 @@ public class FloaromaTownState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_204) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_204) >= 0.95) {
             setNextState(new Route204State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_205) >= 0.95) {
             setNextState(new Route205State());

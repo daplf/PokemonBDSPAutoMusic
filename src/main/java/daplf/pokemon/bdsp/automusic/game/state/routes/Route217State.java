@@ -14,7 +14,7 @@ public class Route217State extends FlyableState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_216) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_216) >= 0.95) {
             setNextState(new Route216State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ACUITY_LAKEFRONT) >= 0.95) {
             setNextState(new AcuityLakefrontState());

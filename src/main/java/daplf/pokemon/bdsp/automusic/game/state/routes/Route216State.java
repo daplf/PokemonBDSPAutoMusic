@@ -16,7 +16,7 @@ public class Route216State extends FlyableState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.MOUNT_CORONET) >= 0.95) {
             setNextState(new MountCoronetState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_217) >= 0.99) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_217) >= 0.95) {
             setNextState(new Route217State());
         } else if (isBattleTrainer(frame)) {
             setNextState(new TrainerBattleState(() -> new Route216State()));

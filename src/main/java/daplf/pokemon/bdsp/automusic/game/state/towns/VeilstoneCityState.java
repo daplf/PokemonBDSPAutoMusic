@@ -19,7 +19,7 @@ public class VeilstoneCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_215) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_215) >= 0.95) {
             setNextState(new Route215State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_214) >= 0.95) {
             setNextState(new Route214State());

@@ -17,7 +17,7 @@ public class HearthomeCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_208) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_208) >= 0.97) {
             setNextState(new Route208State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_209) >= 0.95) {
             setNextState(new Route209State());

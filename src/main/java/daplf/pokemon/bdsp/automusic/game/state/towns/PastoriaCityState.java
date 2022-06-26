@@ -16,7 +16,7 @@ public class PastoriaCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_213) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_213) >= 0.95) {
             setNextState(new Route213State());
         } else if (isGym(frame)) {
             setNextState(new WakeGymState());

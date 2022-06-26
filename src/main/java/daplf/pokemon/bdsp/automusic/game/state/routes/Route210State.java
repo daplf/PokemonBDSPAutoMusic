@@ -18,7 +18,7 @@ public class Route210State extends FlyableState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.SOLACEON_TOWN) >= 0.95) {
             setNextState(new SolaceonTownState());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_215) >= 0.99) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_215) >= 0.95) {
             setNextState(new Route215State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.CELESTIC_TOWN) >= 0.95) {
             setNextState(new CelesticTownState());

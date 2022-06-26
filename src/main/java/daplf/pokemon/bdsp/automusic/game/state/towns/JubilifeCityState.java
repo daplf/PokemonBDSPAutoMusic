@@ -18,9 +18,9 @@ public class JubilifeCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_202) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_202) >= 0.97) {
             setNextState(new Route202State());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_203) >= 0.99) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_203) >= 0.95) {
             setNextState(new Route203State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_204) >= 0.95) {
             setNextState(new Route204State());

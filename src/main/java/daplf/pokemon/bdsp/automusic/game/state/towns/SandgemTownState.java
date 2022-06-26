@@ -17,7 +17,7 @@ public class SandgemTownState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.99) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.95) {
             setNextState(new Route201State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_202) >= 0.95) {
             setNextState(new Route202State());
