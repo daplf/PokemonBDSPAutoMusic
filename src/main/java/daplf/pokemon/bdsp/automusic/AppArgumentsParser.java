@@ -40,7 +40,7 @@ public class AppArgumentsParser {
             int gameOffsetX = Integer.parseInt(line.getOptionValue("gx", String.valueOf(0)));
             int gameOffsetY = Integer.parseInt(line.getOptionValue("gy", String.valueOf(0)));
             String songManifestPath = line.getOptionValue("s");
-            String songManifestType = line.getOptionValue("st", "youtube");
+            String songManifestType = line.getOptionValue("st", "local");
 
             return new AppArguments(device, width, height, gameWidth, gameHeight, gameOffsetX, gameOffsetY, songManifestPath, songManifestType);
         } catch (final ParseException ex) {

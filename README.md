@@ -12,7 +12,7 @@ If you've ever done/watched a Pokemon BDSP speedrun, you've certainly noticed th
 
 ## Disclaimer
 
-This is currently just a prototype. I have only tested it on Windows 10 and using an Elgato HD60 S+ capture card. Only the first 5 minutes of the game are supported for now. If there's enough interest, I can keep working on this to cover the entire game.
+This is currently just a prototype. I have only tested it on Windows 10 and using an Elgato HD60 S+ capture card. A minimal version of the entire game is covered, but it has not been thoroughly tested. It was built with the Kadachar route in mind, which means only things that are used by this route are considered for now. Other things may or may not work. I also left out some events for now (either because they were not that relevant for a first release or because they were very difficult to include).
 
 ## Development
 
@@ -37,11 +37,13 @@ Where:
 - `device-height` - The height of your capturing device (e.g., 1080).
 - `game-width` - The width of your game window (e.g., 1920). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
 - `game-height` - The height of your game window (e.g., 1080). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
+- `game-offset-x` - The X offset of your game window (e.g., 100). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
+- `game-offset-y` - The Y offset of your game window (e.g., 100). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
 - `path-to-song-manifest` - The file system path to your song manifest (see [Song Manifest](#song-manifest)).
 
 ## Setting up a Virtual Camera
 
-Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw` and `-gh` command line options to specify the resolution of the game window inside the scene. The tool will then resize the templates used for image recongition accordingly.
+Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recongition accordingly.
 
 Note that this is only needed because you will be recording/streaming your speedrun. If you weren't, you could just use the capture card output directly using this tool.
 
@@ -57,7 +59,78 @@ route-201-night=C:\\path\\to\\route-201-day.wav
 battle-wild=C:\\path\\to\\battle-wild.wav
 lake=C:\\path\\to\\lake.wav
 choose-starter=C:\\path\\to\\choose-starter.wav
+sandgem-town-day=C:\\path\\to\\sandgem-town-day.wav
+sandgem-town-night=C:\\path\\to\\sandgem-town-day.wav
+pokemon-center-day=C:\\path\\to\\pokemon-center-day.wav
+pokemon-center-night=C:\\path\\to\\pokemon-center-day.wav
+poke-mart=C:\\path\\to\\poke-mart.wav
+pokemon-lab=C:\\path\\to\\pokemon-lab.wav
+battle-trainer=C:\\path\\to\\battle-trainer.wav
+jubilife-city-day=C:\\path\\to\\jubilife-city-day.wav
+jubilife-city-night=C:\\path\\to\\jubilife-city-day.wav
+route-203-day=C:\\path\\to\\route-203-day.wav
+route-203-night=C:\\path\\to\\route-203-day.wav
+battle-rival=C:\\path\\to\\battle-rival.wav
+oreburgh-gate=C:\\path\\to\\oreburgh-gate.wav
+oreburgh-city-day=C:\\path\\to\\oreburgh-city-day.wav
+oreburgh-city-night=C:\\path\\to\\oreburgh-city-day.wav
+pokemon-gym=C:\\path\\to\\pokemon-gym.wav
+battle-gym-leader=C:\\path\\to\\battle-gym-leader.wav
+battle-galactic-grunt=C:\\path\\to\\battle-galactic-grunt.wav
+floaroma-town-day=C:\\path\\to\\floaroma-town-day.wav
+floaroma-town-night=C:\\path\\to\\floaroma-town-day.wav
+route-205-day=C:\\path\\to\\route-205-day.wav
+route-205-night=C:\\path\\to\\route-205-day.wav
+battle-galactic-commander=C:\\path\\to\\battle-galactic-commander.wav
+eterna-forest=C:\\path\\to\\eterna-forest.wav
+eterna-city-day=C:\\path\\to\\eterna-city-day.wav
+eterna-city-night=C:\\path\\to\\eterna-city-day.wav
+galactic-eterna-building=C:\\path\\to\\galactic-eterna-building.wav
+route-206-day=C:\\path\\to\\route-206-day.wav
+route-206-night=C:\\path\\to\\route-206-day.wav
+hearthome-city-day=C:\\path\\to\\hearthome-city-day.wav
+hearthome-city-night=C:\\path\\to\\hearthome-city-day.wav
+route-209-day=C:\\path\\to\\route-209-day.wav
+route-209-night=C:\\path\\to\\route-209-day.wav
+solaceon-town-day=C:\\path\\to\\solaceon-town-day.wav
+solaceon-town-night=C:\\path\\to\\solaceon-town-day.wav
+route-210-day=C:\\path\\to\\route-210-day.wav
+route-210-night=C:\\path\\to\\route-210-day.wav
+veilstone-city-day=C:\\path\\to\\veilstone-city-day.wav
+veilstone-city-night=C:\\path\\to\\veilstone-city-day.wav
+valor-lakefront-day=C:\\path\\to\\valor-lakefront-day.wav
+valor-lakefront-night=C:\\path\\to\\valor-lakefront-day.wav
+canalave-city-day=C:\\path\\to\\canalave-city-day.wav
+canalave-city-night=C:\\path\\to\\canalave-city-day.wav
+route-216-day=C:\\path\\to\\route-216-day.wav
+route-216-night=C:\\path\\to\\route-216-day.wav
+snowpoint-city-day=C:\\path\\to\\snowpoint-city-day.wav
+snowpoint-city-night=C:\\path\\to\\snowpoint-city-day.wav
+galactic-hq=C:\\path\\to\\galactic-hq.wav
+battle-galactic-boss=C:\\path\\to\\battle-galactic-boss.wav
+deep-within-galactic-hq=C:\\path\\to\\deep-within-galactic-hq.wav
+mount-coronet=C:\\path\\to\\mount-coronet.wav
+spear-pillar=C:\\path\\to\\spear-pillar.wav
+legendary-appears=C:\\path\\to\\legendary-appears.wav
+catastrophe=C:\\path\\to\\catastrophe.wav
+lake-caverns=C:\\path\\to\\lake-caverns.wav
+battle-dialga-palkia=C:\\path\\to\\battle-dialga-palkia.wav
+sunyshore-city-day=C:\\path\\to\\sunyshore-city-day.wav
+sunyshore-city-night=C:\\path\\to\\sunyshore-city-day.wav
+victory-road=C:\\path\\to\\victory-road.wav
+pokemon-league-day=C:\\path\\to\\pokemon-league-day.wav
+pokemon-league-night=C:\\path\\to\\pokemon-league-day.wav
+decisive-battle=C:\\path\\to\\decisive-battle.wav
+elite-four-appears=C:\\path\\to\\elite-four-appears.wav
+battle-elite-four=C:\\path\\to\\battle-elite-four.wav
+cynthia-theme=C:\\path\\to\\cynthia-theme.wav
+battle-champion=C:\\path\\to\\battle-champion.wav
+hall-of-fame=C:\\path\\to\\hall-of-fame.wav
+congratulations-hall-of-fame=C:\\path\\to\\congratulations-hall-of-fame.wav
+ending-theme=C:\\path\\to\\ending-theme.wav
 ```
+
+I also provide experimental support for Youtube backed songs. You can use the `-st youtube` option to use the youtube player. The manifest is the same, but with youtube URLs rather than local file URIs.
 
 ## Authors
 
