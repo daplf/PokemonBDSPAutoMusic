@@ -14,7 +14,7 @@ public class VerityLakefrontState extends FlyableState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
+        if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new LakeVerityState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_201) >= 0.95) {
             setNextState(new Route201State());

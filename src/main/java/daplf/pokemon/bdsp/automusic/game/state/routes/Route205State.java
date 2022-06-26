@@ -23,7 +23,7 @@ public class Route205State extends FlyableState {
             setNextState(new WildBattleState(() -> new Route205State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VALLEY_WINDWORKS) >= 0.95) {
             setNextState(new ValleyWindworksState());
-        } else if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
+        } else if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new EternaForestState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ETERNA_CITY) >= 0.95) {
             setNextState(new EternaCityState());

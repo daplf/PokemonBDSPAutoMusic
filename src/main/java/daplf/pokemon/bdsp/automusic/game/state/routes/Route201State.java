@@ -17,7 +17,7 @@ public class Route201State extends FlyableState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if ((fadedIn() && ImageUtils.isBlackScreen(frame)) || StateUtils.matchAreaTitle(frame, StateIndicators.TWINLEAF_TOWN) >= 0.95) {
+        if ((fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) || StateUtils.matchAreaTitle(frame, StateIndicators.TWINLEAF_TOWN) >= 0.95) {
             setNextState(new TwinleafTownState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.VERITY_LAKEFRONT) >= 0.95) {
             setNextState(new VerityLakefrontState());

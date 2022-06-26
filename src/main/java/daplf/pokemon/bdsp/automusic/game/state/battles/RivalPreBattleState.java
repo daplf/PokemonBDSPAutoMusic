@@ -18,7 +18,7 @@ public class RivalPreBattleState extends State {
 
     @Override
     public void processFrame(final Mat frame) {
-        if (ImageUtils.isBlackScreen(frame)) {
+        if (ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new RivalBattleState(postBattleStateSupplier));
         }
     }

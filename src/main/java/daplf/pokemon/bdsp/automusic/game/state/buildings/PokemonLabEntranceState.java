@@ -12,7 +12,7 @@ public class PokemonLabEntranceState extends State {
 
     @Override
     public void processFrame(final Mat frame) {
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
+        if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new PokemonLabState());
         }
     }

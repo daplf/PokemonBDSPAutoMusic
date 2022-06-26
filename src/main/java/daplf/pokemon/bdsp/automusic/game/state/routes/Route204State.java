@@ -21,7 +21,7 @@ public class Route204State extends FlyableState {
             setNextState(new JubilifeCityState());
         } else if (isBattleGrass(frame)) {
             setNextState(new WildBattleState(() -> new Route204State()));
-        } else if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
+        } else if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new RavagedPathState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.FLOAROMA_TOWN) >= 0.95) {
             setNextState(new FloaromaTownState());

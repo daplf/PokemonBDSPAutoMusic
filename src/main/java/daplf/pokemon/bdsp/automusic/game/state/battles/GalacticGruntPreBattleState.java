@@ -18,7 +18,7 @@ public class GalacticGruntPreBattleState extends State {
 
     @Override
     public void processFrame(final Mat frame) {
-        if (ImageUtils.isBlackScreen(frame)) {
+        if (ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
             setNextState(new GalacticGruntBattleState(postBattleStateSupplier));
         }
     }

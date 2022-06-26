@@ -9,7 +9,6 @@ import org.apache.commons.io.IOUtils;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfByte;
-import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.core.Core.MinMaxLocResult;
 import org.opencv.imgcodecs.Imgcodecs;
@@ -61,10 +60,6 @@ public class ImageUtils {
         return result;
     }
 
-    public static boolean isWhiteScreen(final Mat image) {
-        return Core.mean(image).equals(new Scalar(254, 254, 254, 0));
-    }
-
     public static Mat getImageResource(final String resourceName) {
         Mat res = images.get(resourceName);
 
@@ -87,10 +82,19 @@ public class ImageUtils {
 
     public static Mat getProportionalSubmat(final Mat mat, final int rowStart, final int rowEnd, final int colStart, final int colEnd) {
         return mat.submat(
-            (int) (rowStart * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
-            (int) (rowEnd * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
-            (int) (colStart * ConfigurationProperties.IMAGE_WIDTH_FACTOR),
-            (int) (colEnd * ConfigurationProperties.IMAGE_WIDTH_FACTOR)
+            ConfigurationProperties.IMAGE_OFFSET_Y + (int) (rowStart * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
+            ConfigurationProperties.IMAGE_OFFSET_Y + (int) (rowEnd * ConfigurationProperties.IMAGE_HEIGHT_FACTOR),
+            ConfigurationProperties.IMAGE_OFFSET_X + (int) (colStart * ConfigurationProperties.IMAGE_WIDTH_FACTOR),
+            ConfigurationProperties.IMAGE_OFFSET_X + (int) (colEnd * ConfigurationProperties.IMAGE_WIDTH_FACTOR)
+        );
+    }
+
+    public static Mat getGameWindowSubmat(final Mat mat) {
+        return mat.submat(
+            ConfigurationProperties.IMAGE_OFFSET_Y,
+            ConfigurationProperties.IMAGE_OFFSET_Y + ConfigurationProperties.IMAGE_HEIGHT,
+            ConfigurationProperties.IMAGE_OFFSET_X,
+            ConfigurationProperties.IMAGE_OFFSET_X + ConfigurationProperties.IMAGE_WIDTH
         );
     }
 }

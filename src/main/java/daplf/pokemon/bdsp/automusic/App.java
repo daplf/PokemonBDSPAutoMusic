@@ -37,6 +37,10 @@ public class App {
         // The image width/height factor is useful in situations where the game width/height is smaller than the camera output.
         // For example, when using the Streamlabs virtual camera, the camera outputs the entire scene,
         // which may contain other things (like splits, chat, etc). The width/height factor allows us to resize all templates accordingly.
+        ConfigurationProperties.IMAGE_OFFSET_X = appArguments.getGameOffsetX();
+        ConfigurationProperties.IMAGE_OFFSET_Y = appArguments.getGameOffsetY();
+        ConfigurationProperties.IMAGE_WIDTH = appArguments.getGameWidth();
+        ConfigurationProperties.IMAGE_HEIGHT = appArguments.getGameHeight();
         ConfigurationProperties.IMAGE_WIDTH_FACTOR = (double) appArguments.getGameWidth() / ConfigurationProperties.DEFAULT_WIDTH;
         ConfigurationProperties.IMAGE_HEIGHT_FACTOR = (double) appArguments.getGameHeight() / ConfigurationProperties.DEFAULT_HEIGHT;
     }

@@ -22,6 +22,8 @@ public class AppArgumentsParser {
         options.addOption(Option.builder("h").longOpt("height").desc("the height of the device output").hasArg(true).required(true).build());
         options.addOption(Option.builder("gw").longOpt("game-width").desc("the width of the game inside the output device").hasArg(true).required(false).build());
         options.addOption(Option.builder("gh").longOpt("game-height").desc("the height of the game inside the output device").hasArg(true).required(false).build());
+        options.addOption(Option.builder("gx").longOpt("game-offset-x").desc("the X offset of the game inside the output device").hasArg(true).required(false).build());
+        options.addOption(Option.builder("gy").longOpt("game-offset-y").desc("the Y offset of the game inside the output device").hasArg(true).required(false).build());
         options.addOption(Option.builder("s").longOpt("song-manifest").desc("the song manifest path").hasArg(true).required(true).build());
         options.addOption(Option.builder("st").longOpt("song-manifest-type").desc("the song manifest type (local/youtube)").hasArg(true).required(false).build());
     }
@@ -35,10 +37,12 @@ public class AppArgumentsParser {
             int height = Integer.parseInt(line.getOptionValue("h"));
             int gameWidth = Integer.parseInt(line.getOptionValue("gw", String.valueOf(width)));
             int gameHeight = Integer.parseInt(line.getOptionValue("gh", String.valueOf(height)));
+            int gameOffsetX = Integer.parseInt(line.getOptionValue("gx", String.valueOf(0)));
+            int gameOffsetY = Integer.parseInt(line.getOptionValue("gy", String.valueOf(0)));
             String songManifestPath = line.getOptionValue("s");
             String songManifestType = line.getOptionValue("st", "youtube");
 
-            return new AppArguments(device, width, height, gameWidth, gameHeight, songManifestPath, songManifestType);
+            return new AppArguments(device, width, height, gameWidth, gameHeight, gameOffsetX, gameOffsetY, songManifestPath, songManifestType);
         } catch (final ParseException ex) {
             throw new RuntimeException("Failed to parse program arguments: " + ex.getMessage());
         }

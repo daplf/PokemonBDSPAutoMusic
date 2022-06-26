@@ -17,6 +17,10 @@ public class AppArguments {
 
     private final int gameHeight;
 
+    private final int gameOffsetX;
+
+    private final int gameOffsetY;
+
     private final String songManifestPath;
 
     private final String songManifestType;
