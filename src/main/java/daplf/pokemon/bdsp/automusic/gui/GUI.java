@@ -8,6 +8,16 @@ import java.util.function.Supplier;
 import daplf.pokemon.bdsp.automusic.game.GameManager;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
+import daplf.pokemon.bdsp.automusic.game.state.battles.CynthiaBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.DialgaPalkiaBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.EliteFourBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticBossBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticCommanderBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GymLeaderBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.RivalBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.TrainerBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaElevatorRoomState;
@@ -51,6 +61,7 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.ValleyWindworksState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValorLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.VerityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.VictoryRoadState;
+import daplf.pokemon.bdsp.automusic.game.state.special.CreditsState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CanalaveCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CelesticTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.EternaCityState;
@@ -104,6 +115,8 @@ public class GUI extends Application {
 
 		private final double height;
 	}
+
+	private static GameManager gameManager;
 
 	private static final List<MapLocationButton> MAP_BUTTONS = List.of(
 		new MapLocationButton("Twinleaf\nTown", TwinleafTownState::new, 100, 850, 60, 40),
@@ -166,10 +179,47 @@ public class GUI extends Application {
 		new MapLocationButton("Elevator", FlintElevatorRoomState::new, 1200, 250, 70, 20),
 		new MapLocationButton("Flint", FlintRoomState::new, 1200, 220, 70, 20),
 		new MapLocationButton("Elevator", LucianElevatorRoomState::new, 1200, 190, 70, 20),
-		new MapLocationButton("Lucian", LucianRoomState::new, 1200, 160, 70, 20)
-	);
+		new MapLocationButton("Lucian", LucianRoomState::new, 1200, 160, 70, 20),
 
-	private static GameManager gameManager;
+		// Battles
+		new MapLocationButton("Wild", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new WildBattleState(() -> previousState);
+		}, 520, 850, 90, 40),
+		new MapLocationButton("Trainer", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new TrainerBattleState(() -> previousState);
+		}, 620, 850, 90, 40),
+		new MapLocationButton("Rival", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new RivalBattleState(() -> previousState);
+		}, 720, 850, 90, 40),
+		new MapLocationButton("Gym\nLeader", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new GymLeaderBattleState(() -> previousState);
+		}, 820, 850, 90, 40),
+		new MapLocationButton("Galactic\nGrunt", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new GalacticGruntBattleState(() -> previousState);
+		}, 920, 850, 90, 40),
+		new MapLocationButton("Galactic\nCommander", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new GalacticCommanderBattleState(() -> previousState);
+		}, 1020, 850,90, 40),
+		new MapLocationButton("Cyrus", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new GalacticBossBattleState(() -> previousState);
+		}, 1120, 850, 90, 40),
+		new MapLocationButton("Dialga\nPalkia", () -> new DialgaPalkiaBattleState(), 1220, 850, 90, 40),
+		new MapLocationButton("E4", () -> {
+			State previousState = gameManager.getCurrentState();
+			return new EliteFourBattleState(() -> previousState);
+		}, 1320, 850, 90, 40),
+		new MapLocationButton("Cynthia", CynthiaBattleState::new, 1420, 850, 70, 40),
+		
+		// Special
+		new MapLocationButton("Credits", CreditsState::new, 1420, 20, 70, 40)
+	);
 
 	private static String songManifestPath;
 
@@ -213,7 +263,7 @@ public class GUI extends Application {
 		try {
 			GUIMusicPlayer musicPlayer = setupMusicPlayer(songManifestPath, songManifestType);
 			Node node = musicPlayer.getCurrentSongNode();
-			node.setLayoutX(1000);
+			node.setLayoutX(700);
 			node.setLayoutY(10);
 			root.getChildren().add(node);
 
