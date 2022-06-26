@@ -60,6 +60,13 @@ public class ImageUtils {
         return result;
     }
 
+    public static boolean isBlackScreenFrame(final Mat frame) {
+        Mat submat = getGameWindowSubmat(frame);
+        boolean result = isBlackScreen(submat);
+        submat.release();
+        return result;
+    }
+
     public static Mat getImageResource(final String resourceName) {
         Mat res = images.get(resourceName);
 

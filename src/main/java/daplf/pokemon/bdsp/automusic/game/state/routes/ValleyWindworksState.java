@@ -18,7 +18,7 @@ public class ValleyWindworksState extends FlyableState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
+        if (fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
             setNextState(new ValleyWindworksPowerplantState());
         } else if (isBattleGrass(frame)) {
             setNextState(new WildBattleState(() -> new ValleyWindworksState()));

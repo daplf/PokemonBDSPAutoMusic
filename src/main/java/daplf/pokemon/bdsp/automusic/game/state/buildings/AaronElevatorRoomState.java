@@ -12,7 +12,7 @@ public class AaronElevatorRoomState extends State {
 
     @Override
     public void processFrame(final Mat frame) {
-        if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
+        if (fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
             setNextState(new AaronRoomState());
         }
     }

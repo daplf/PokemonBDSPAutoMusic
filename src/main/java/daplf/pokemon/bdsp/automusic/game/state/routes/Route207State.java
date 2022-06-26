@@ -22,7 +22,7 @@ public class Route207State extends FlyableState {
             setNextState(new WildBattleState(() -> new Route207State()));
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_206) >= 0.99) {
             setNextState(new Route206State());
-        } else if (fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
+        } else if (fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
             setNextState(new MountCoronetState());
         }
     }

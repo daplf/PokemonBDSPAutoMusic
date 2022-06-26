@@ -17,7 +17,7 @@ public class ValleyWindworksPowerplantState extends State {
     public void processFrame(final Mat frame) {
         if (isValleyWindworksSign(frame)) {
             setNextState(new ValleyWindworksState());
-        } else if (!encounteredFirstGrunt && fadedIn() && ImageUtils.isBlackScreen(ImageUtils.getGameWindowSubmat(frame))) {
+        } else if (!encounteredFirstGrunt && fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
             encounteredFirstGrunt = true;
             setNextState(new GalacticGruntBattleState(() -> new ValleyWindworksPowerplantState()));
         } else if (isBattleGalacticCommander(frame)) {
