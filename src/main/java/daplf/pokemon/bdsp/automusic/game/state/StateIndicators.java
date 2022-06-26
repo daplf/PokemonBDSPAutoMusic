@@ -200,11 +200,23 @@ public class StateIndicators {
 
     public static final Mat SUNYSHORE_CITY = ImageUtils.getImageResource("sunyshore-city.png");
 
+    public static final Mat VOLKNER_GYM_WALL = ImageUtils.getImageResource("volkner-gym-wall.png");
+
+    public static final Mat VOLKNER_GYM_FLOOR = ImageUtils.getImageResource("volkner-gym-floor.png");
+
     public static final Mat ROUTE_223 = ImageUtils.getImageResource("route-223.png");
+
+    public static final Mat BATTLE_TRAINER_WATER = ImageUtils.getImageResource("battle-trainer-water.png");
 
     public static final Mat VICTORY_ROAD = ImageUtils.getImageResource("victory-road.png");
 
+    public static final Mat BATTLE_TRAINER_VICTORY_ROAD = ImageUtils.getImageResource("battle-trainer-victory-road.png");
+
     public static final Mat POKEMON_LEAGUE = ImageUtils.getImageResource("pokemon-league.png");
+
+    public static final Mat POKEMON_LEAGUE_STATUE = ImageUtils.getImageResource("pokemon-league-statue.png");
+
+    public static final Mat BATTLE_RIVAL_POKEMON_LEAGUE = ImageUtils.getImageResource("battle-rival-pokemon-league.png");
 
     public static final Mat STARAPTOR_BANNER = ImageUtils.getImageResource("staraptor-banner.png");
 }
