@@ -8,7 +8,6 @@ import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route210State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route211State;
-import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
 public class CelesticTownState extends TownState {
 
@@ -28,13 +27,5 @@ public class CelesticTownState extends TownState {
     @Override
     public Songs getSong() {
         return Songs.ETERNA_CITY_DAY;
-    }
-
-    @Override
-    protected boolean isBattleGalacticGrunt(final Mat frame) {
-        Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 254, 1050, 1920);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GALACTIC) >= 0.8;
-        submat.release();
-        return result;
     }
 }

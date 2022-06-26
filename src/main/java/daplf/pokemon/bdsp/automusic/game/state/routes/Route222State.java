@@ -5,6 +5,7 @@ import org.opencv.core.Mat;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
+import daplf.pokemon.bdsp.automusic.game.state.battles.TrainerBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SunyshoreCityState;
 
@@ -18,6 +19,8 @@ public class Route222State extends FlyableState {
             setNextState(new ValorLakefrontState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SUNYSHORE_CITY) >= 0.95) {
             setNextState(new SunyshoreCityState());
+        } else if (isBattleTrainer(frame)) {
+            setNextState(new TrainerBattleState(() -> new Route222State()));
         }
     }
 

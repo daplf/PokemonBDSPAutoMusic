@@ -72,6 +72,15 @@ public class MusicUtils {
         songManifest.put(Songs.ROUTE_216_NIGHT, properties.getProperty("route-216-night"));
         songManifest.put(Songs.SNOWPOINT_CITY_DAY, properties.getProperty("snowpoint-city-day"));
         songManifest.put(Songs.SNOWPOINT_CITY_NIGHT, properties.getProperty("snowpoint-city-night"));
+        songManifest.put(Songs.GALACTIC_HQ, properties.getProperty("galactic-hq"));
+        songManifest.put(Songs.BATTLE_GALACTIC_BOSS, properties.getProperty("battle-galactic-boss"));
+        songManifest.put(Songs.DEEP_WITHIN_GALACTIC_HQ, properties.getProperty("deep-within-galactic-hq"));
+        songManifest.put(Songs.MOUNT_CORONET, properties.getProperty("mount-coronet"));
+        songManifest.put(Songs.SPEAR_PILLAR, properties.getProperty("spear-pillar"));
+        songManifest.put(Songs.LEGENDARY_APPEARS, properties.getProperty("legendary-appears"));
+        songManifest.put(Songs.CATASTROPHE, properties.getProperty("catastrophe"));
+        songManifest.put(Songs.LAKE_CAVERNS, properties.getProperty("lake-caverns"));
+        songManifest.put(Songs.BATTLE_DIALGA_PALKIA, properties.getProperty("battle-dialga-palkia"));
         songManifest.put(Songs.SUNYSHORE_CITY_DAY, properties.getProperty("sunyshore-city-day"));
         songManifest.put(Songs.SUNYSHORE_CITY_NIGHT, properties.getProperty("sunyshore-city-night"));
         songManifest.put(Songs.VICTORY_ROAD, properties.getProperty("victory-road"));

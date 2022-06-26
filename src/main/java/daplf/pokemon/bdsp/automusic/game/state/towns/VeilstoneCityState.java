@@ -6,6 +6,7 @@ import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.GalacticHqState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.MayleneGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.VeilstoneDepartmentStoreState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route214State;
@@ -28,6 +29,8 @@ public class VeilstoneCityState extends TownState {
             setNextState(new MayleneGymState());
         } else if (isBattleGalacticGrunt(frame)) {
             setNextState(new GalacticGruntBattleState(() -> new VeilstoneCityState()));
+        } else if (isGalacticHq(frame)) {
+            setNextState(new GalacticHqState());
         }
     }
 
@@ -50,6 +53,18 @@ public class VeilstoneCityState extends TownState {
 
         Mat submat2 = ImageUtils.getProportionalSubmat(frame, 515, 760, 1010, 1190);
         boolean result2 = ImageUtils.matchTemplate(submat2, StateIndicators.MAYLENE_GYM_GUIDE) >= 0.9;
+        submat2.release();
+
+        return result || result2;
+    }
+
+    private boolean isGalacticHq(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 295, 370, 770, 1040);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.GALACTIC_HQ_LAMP) >= 0.9;
+        submat.release();
+
+        Mat submat2 = ImageUtils.getProportionalSubmat(frame, 280, 480, 185, 435);
+        boolean result2 = ImageUtils.matchTemplate(submat2, StateIndicators.GALACTIC_HQ_FLOOR_SIGN) >= 0.9;
         submat2.release();
 
         return result || result2;

@@ -8,10 +8,12 @@ import java.util.function.Supplier;
 import daplf.pokemon.bdsp.automusic.game.GameManager;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.GalacticHqState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.AcuityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.EternaForestState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeValorState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeVerityState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.MountCoronetNearTopState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.MountCoronetState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghGateState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.OreburghMineState;
@@ -36,6 +38,7 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.Route217State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route218State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route222State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route223State;
+import daplf.pokemon.bdsp.automusic.game.state.routes.SpearPillarState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValleyWindworksState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValorLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.VerityLakefrontState;
@@ -118,7 +121,11 @@ public class GUI extends Application {
 		new MapLocationButton("Eterna\nCity", EternaCityState::new, 410, 460, 70, 40),
 		new MapLocationButton("Route\n206", Route206State::new, 415, 515, 60, 80),
 		new MapLocationButton("Route\n207", Route207State::new, 415, 610, 135, 40),
-		new MapLocationButton("Mount\nCoronet", MountCoronetState::new, 560, 360, 60, 290),
+		new MapLocationButton("Mount\nCoronet", MountCoronetState::new, 560, 360, 60, 40),
+		new MapLocationButton("Mount\nCoronet\nNear\nTop", MountCoronetNearTopState::new, 560, 410, 60, 70),
+		new MapLocationButton("Spear\nPillar", SpearPillarState::new, 560, 485, 60, 40),
+		new MapLocationButton("Mount\nCoronet\nNear\nTop", MountCoronetNearTopState::new, 560, 530, 60, 70),
+		new MapLocationButton("Mount\nCoronet", MountCoronetState::new, 560, 610, 60, 40),
 		new MapLocationButton("Route\n208", Route208State::new, 630, 610, 60, 40),
 		new MapLocationButton("Hearthome\nCity", HearthomeCityState::new, 700, 610, 70, 40),
 		new MapLocationButton("Route\n209", Route209State::new, 785, 610, 60, 40),
@@ -126,6 +133,7 @@ public class GUI extends Application {
 		new MapLocationButton("Route\n210", Route210State::new, 785, 460, 60, 90),
 		new MapLocationButton("Route\n215", Route215State::new, 855, 490, 120, 40),
 		new MapLocationButton("Veilstone\nCity", VeilstoneCityState::new, 985, 490, 70, 40),
+		new MapLocationButton("Galactic\nHQ", GalacticHqState::new, 985, 440, 70, 40),
 		new MapLocationButton("Route\n214", Route214State::new, 990, 540, 60, 90),
 		new MapLocationButton("Valor\nLakefront", ValorLakefrontState::new, 985, 640, 70, 80),
 		new MapLocationButton("Lake\nValor", LakeValorState::new, 905, 650, 70, 40),

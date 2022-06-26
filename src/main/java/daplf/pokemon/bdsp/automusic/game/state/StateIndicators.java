@@ -146,6 +146,12 @@ public class StateIndicators {
 
     public static final Mat CANALAVE_CITY = ImageUtils.getImageResource("canalave-city.png");
 
+    public static final Mat BATTLE_RIVAL_CANALAVE = ImageUtils.getImageResource("battle-rival-canalave.png");
+
+    public static final Mat BYRON_GYM_WALL = ImageUtils.getImageResource("byron-gym-wall.png");
+
+    public static final Mat BYRON_GYM_ELEVATOR = ImageUtils.getImageResource("byron-gym-elevator.png");
+
     public static final Mat ROUTE_211 = ImageUtils.getImageResource("route-211.png");
 
     public static final Mat ROUTE_216 = ImageUtils.getImageResource("route-216.png");
@@ -157,6 +163,38 @@ public class StateIndicators {
     public static final Mat LAKE_ACUITY = ImageUtils.getImageResource("lake-acuity.png");
 
     public static final Mat SNOWPOINT_CITY = ImageUtils.getImageResource("snowpoint-city.png");
+
+    public static final Mat CANDICE_GYM_ICE = ImageUtils.getImageResource("candice-gym-ice.png");
+
+    public static final Mat CANDICE_GYM_STATUE = ImageUtils.getImageResource("candice-gym-statue.png");
+
+    public static final Mat GALACTIC_HQ_OUTSIDE_CONTAINER = ImageUtils.getImageResource("galactic-hq-outside-container.png");
+
+    public static final Mat GALACTIC_HQ_LAMP = ImageUtils.getImageResource("galactic-hq-lamp.png");
+
+    public static final Mat GALACTIC_HQ_FLOOR_SIGN = ImageUtils.getImageResource("galactic-hq-floor-sign.png");
+
+    public static final Mat GALACTIC_HQ_WALL = ImageUtils.getImageResource("galactic-hq-wall.png");
+
+    public static final Mat GALACTIC_HQ_4F2_WALL = ImageUtils.getImageResource("galactic-hq-4f2-wall.png");
+
+    public static final Mat MOUNT_CORONET_SNOW = ImageUtils.getImageResource("mount-coronet-snow.png");
+
+    public static final Mat SPEAR_PILLAR = ImageUtils.getImageResource("spear-pillar.png");
+
+    public static final Mat SPEAR_PILLAR_LEFT_COLUMN = ImageUtils.getImageResource("spear-pillar-left-column.png");
+
+    public static final Mat BATTLE_DIALGA_PALKIA = ImageUtils.getImageResource("battle-dialga-palkia.png");
+
+    public static final Mat BOSS_NAME_TAG = ImageUtils.getImageResource("boss-name-tag.png");
+
+    public static final Mat SPEAR_PILLAR_BROKEN_COLUMN = ImageUtils.getImageResource("spear-pillar-broken-column.png");
+
+    public static final Mat MARS_NAME_TAG = ImageUtils.getImageResource("mars-name-tag.png");
+
+    public static final Mat CYRUS_EYE_UPSET = ImageUtils.getImageResource("cyrus-eye-upset.png");
+
+    public static final Mat SPEAR_PILLAR_BROKEN_LEFT_COLUMN = ImageUtils.getImageResource("spear-pillar-broken-left-column.png");
 
     public static final Mat ROUTE_222 = ImageUtils.getImageResource("route-222.png");
 

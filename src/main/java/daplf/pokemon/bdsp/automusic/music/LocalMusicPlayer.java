@@ -43,6 +43,7 @@ public class LocalMusicPlayer implements MusicPlayer {
         if (currentSong == null || currentSong != song) {
             try {
                 log.info("Playing: {}", song);
+
                 AudioInputStream audioStream =  AudioSystem.getAudioInputStream(songs.get(song));
 
                 clip.close();

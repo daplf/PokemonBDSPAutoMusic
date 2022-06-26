@@ -4,6 +4,9 @@ import org.opencv.core.Mat;
 
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
+import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticCommanderBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.ChooseStarterState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
@@ -14,10 +17,14 @@ public class LakeVerityState extends FlyableState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (fadedIn() && ImageUtils.isBlackScreen(frame)) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.VERITY_LAKEFRONT) >= 0.95) {
             setNextState(new VerityLakefrontState());
         } else if (isChooseStarter(frame)) {
             setNextState(new ChooseStarterState());
+        } else if(isBattleGalacticGrunt(frame)) {
+            setNextState(new GalacticGruntBattleState(() -> new LakeVerityState()));
+        } else if (isBattleGalacticCommander(frame)) {
+            setNextState(new GalacticCommanderBattleState(() -> new LakeVerityState()));
         }
     }
 

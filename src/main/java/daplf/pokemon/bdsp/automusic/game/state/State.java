@@ -49,8 +49,8 @@ public abstract class State {
     }
 
     protected boolean isBattleGalacticGrunt(final Mat frame) {
-        Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 254, 1050, 1920);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_GALACTIC) >= 0.7;
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 1080, 700, 1000);
+        boolean result = ImageUtils.matchTemplateSqDiff(submat, StateIndicators.BATTLE_GALACTIC) <= 0.1;
         submat.release();
         return result;
     }
