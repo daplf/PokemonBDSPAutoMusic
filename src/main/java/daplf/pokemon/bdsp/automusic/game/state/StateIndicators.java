@@ -218,5 +218,19 @@ public class StateIndicators {
 
     public static final Mat BATTLE_RIVAL_POKEMON_LEAGUE = ImageUtils.getImageResource("battle-rival-pokemon-league.png");
 
+    public static final Mat POKEMON_LEAGUE_ELEVATOR_ROOM_WALL = ImageUtils.getImageResource("pokemon-league-elevator-room-wall.png");
+
+    public static final Mat AARON_CUTSCENE = ImageUtils.getImageResource("aaron-cutscene.png");
+
+    public static final Mat BATTLE_ELITE_FOUR = ImageUtils.getImageResource("battle-elite-four.png");
+
+    public static final Mat POKEMON_LEAGUE_ELEVATOR_ROOM_LEFT_WALL = ImageUtils.getImageResource("pokemon-league-elevator-room-left-wall.png");
+
+    public static final Mat BERTHA_CUTSCENE = ImageUtils.getImageResource("bertha-cutscene.png");
+
+    public static final Mat FLINT_CUTSCENE = ImageUtils.getImageResource("flint-cutscene.png");
+
+    public static final Mat LUCIAN_CUTSCENE = ImageUtils.getImageResource("lucian-cutscene.png");
+
     public static final Mat STARAPTOR_BANNER = ImageUtils.getImageResource("staraptor-banner.png");
 }

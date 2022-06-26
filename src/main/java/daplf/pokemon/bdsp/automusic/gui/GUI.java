@@ -8,7 +8,15 @@ import java.util.function.Supplier;
 import daplf.pokemon.bdsp.automusic.game.GameManager;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronElevatorRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaElevatorRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintElevatorRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.GalacticHqState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianElevatorRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.AcuityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.EternaForestState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeValorState;
@@ -150,7 +158,15 @@ public class GUI extends Application {
 		new MapLocationButton("Route\n223", Route223State::new, 1205, 550, 60, 120),
 		new MapLocationButton("Pokemon\nLeague", PokemonLeagueState::new, 1200, 500, 70, 40),
 		new MapLocationButton("Victory\nRoad", VictoryRoadState::new, 1200, 450, 70, 40),
-		new MapLocationButton("Pokemon\nLeague", PokemonLeagueState::new, 1200, 400, 70, 40)
+		new MapLocationButton("Pokemon\nLeague", PokemonLeagueState::new, 1200, 400, 70, 40),
+		new MapLocationButton("Elevator", AaronElevatorRoomState::new, 1200, 370, 70, 20),
+		new MapLocationButton("Aaron", AaronRoomState::new, 1200, 340, 70, 20),
+		new MapLocationButton("Elevator", BerthaElevatorRoomState::new, 1200, 310, 70, 20),
+		new MapLocationButton("Bertha", BerthaRoomState::new, 1200, 280, 70, 20),
+		new MapLocationButton("Elevator", FlintElevatorRoomState::new, 1200, 250, 70, 20),
+		new MapLocationButton("Flint", FlintRoomState::new, 1200, 220, 70, 20),
+		new MapLocationButton("Elevator", LucianElevatorRoomState::new, 1200, 190, 70, 20),
+		new MapLocationButton("Lucian", LucianRoomState::new, 1200, 160, 70, 20)
 	);
 
 	private static GameManager gameManager;

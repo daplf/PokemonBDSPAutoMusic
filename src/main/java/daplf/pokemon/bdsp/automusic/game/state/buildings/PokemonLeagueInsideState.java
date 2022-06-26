@@ -20,6 +20,8 @@ public class PokemonLeagueInsideState extends State {
             setNextState(new PokemonLeagueState());
         } else if (isBattleRival(frame)) {
             setNextState(new RivalBattleState(() -> new PokemonLeagueInsideState()));
+        } else if (isElevatorRoomWall(frame)) {
+            setNextState(new AaronElevatorRoomState());
         }
     }
 
@@ -31,6 +33,13 @@ public class PokemonLeagueInsideState extends State {
     private boolean isBattleRival(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 250, 1250, 1920);
         boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_RIVAL_POKEMON_LEAGUE) >= 0.9;
+        submat.release();
+        return result;
+    }
+
+    private boolean isElevatorRoomWall(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 5, 300, 380, 1500);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.POKEMON_LEAGUE_ELEVATOR_ROOM_WALL) >= 0.8;
         submat.release();
         return result;
     }

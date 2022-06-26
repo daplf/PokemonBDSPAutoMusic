@@ -86,6 +86,14 @@ public class MusicUtils {
         songManifest.put(Songs.VICTORY_ROAD, properties.getProperty("victory-road"));
         songManifest.put(Songs.POKEMON_LEAGUE_DAY, properties.getProperty("pokemon-league-day"));
         songManifest.put(Songs.POKEMON_LEAGUE_NIGHT, properties.getProperty("pokemon-league-night"));
+        songManifest.put(Songs.DECISIVE_BATTLE, properties.getProperty("decisive-battle"));
+        songManifest.put(Songs.ELITE_FOUR_APPEARS, properties.getProperty("elite-four-appears"));
+        songManifest.put(Songs.BATTLE_ELITE_FOUR, properties.getProperty("battle-elite-four"));
+        songManifest.put(Songs.CYNTHIA_THEME, properties.getProperty("cynthia-theme"));
+        songManifest.put(Songs.BATTLE_CHAMPION, properties.getProperty("battle-champion"));
+        songManifest.put(Songs.HALL_OF_FAME, properties.getProperty("hall-of-fame"));
+        songManifest.put(Songs.CONGRATULATIONS_HALL_OF_FAME, properties.getProperty("congratulations-hall-of-fame"));
+        songManifest.put(Songs.ENDING_THEME, properties.getProperty("ending-theme"));
 
         return songManifest;
     }
