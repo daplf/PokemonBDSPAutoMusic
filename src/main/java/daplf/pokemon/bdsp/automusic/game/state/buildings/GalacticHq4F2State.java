@@ -13,7 +13,7 @@ public class GalacticHq4F2State extends State {
     @Override
     public void processFrame(final Mat frame) {
         if (isBattleGalacticCommander(frame)) {
-            setNextState(new GalacticCommanderBattleState(() -> new GalacticHqState()));
+            setNextState(new GalacticCommanderBattleState(() -> new GalacticHq4F2State()));
         } else if (isGalacticHqWall(frame)) {
             setNextState(new GalacticHqState());
         }

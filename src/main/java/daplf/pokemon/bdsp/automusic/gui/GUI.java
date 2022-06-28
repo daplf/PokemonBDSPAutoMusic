@@ -22,11 +22,19 @@ import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.AaronRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.ByronGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.CandiceGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.FantinaGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.GalacticHqState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.GardeniaGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianRoomState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.MayleneGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.RoarkGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.VolknerGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.WakeGymState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.AcuityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.EternaForestState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeValorState;
@@ -216,6 +224,16 @@ public class GUI extends Application {
             return new EliteFourBattleState(() -> previousState);
         }, 1320, 850, 90, 40),
         new MapLocationButton("Cynthia", CynthiaBattleState::new, 1420, 850, 70, 40),
+
+        // Gyms
+        new MapLocationButton("Roark's\nGym", RoarkGymState::new, 520, 800, 90, 40),
+        new MapLocationButton("Gardenia's\nGym", GardeniaGymState::new, 620, 800, 90, 40),
+        new MapLocationButton("Maylene's\nGym", MayleneGymState::new, 720, 800, 90, 40),
+        new MapLocationButton("Wake's\nGym", WakeGymState::new, 820, 800, 90, 40),
+        new MapLocationButton("Fantina's\nGym", FantinaGymState::new, 920, 800, 90, 40),
+        new MapLocationButton("Byron's\nGym", ByronGymState::new, 1020, 800,90, 40),
+        new MapLocationButton("Candice's\nGym", CandiceGymState::new, 1120, 800, 90, 40),
+        new MapLocationButton("Volkner's\nGym", VolknerGymState::new, 1220, 800, 90, 40),
         
         // Special
         new MapLocationButton("Credits", CreditsState::new, 1420, 20, 70, 40)
