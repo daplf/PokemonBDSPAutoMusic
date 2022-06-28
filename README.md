@@ -14,20 +14,12 @@ If you've ever done/watched a Pokemon BDSP speedrun, you've certainly noticed th
 
 This is currently just a prototype. I have only tested it on Windows 10 and using an Elgato HD60 S+ capture card. A minimal version of the entire game is covered, but it has not been thoroughly tested. It was built with the Kadachar route in mind, which means only things that are used by this route are considered for now. Other things may or may not work. I also left out some events for now (either because they were not that relevant for a first release or because they were very difficult to include).
 
-## Development
+## Usage
 
-You need JDK 11 and Maven installed.
-
-To package the tool, use:
+You need Java 11+ to use the tool. You can then download the [latest release](https://github.com/daplf/PokemonBDSPAutoMusic/releases) (the JAR file) and run:
 
 ```
-mvn clean package
-```
-
-Afterwards, you can run it with:
-
-```
-java -jar target\pokemon-bdsp-automusic-jar-with-dependencies.jar -d <device-number> -w <device-width> -h <device-height> -gw <game-width> -gh <game-height> -s <path-to-song-manifest>
+java -jar pokemon-bdsp-automusic.jar -d <device-number> -w <device-width> -h <device-height> -gw <game-width> -gh <game-height> -gx <game-offset-x> -gy <game-offset-y> -s <path-to-song-manifest> -st <song-manifest-type>
 ```
 
 Where:
@@ -40,10 +32,15 @@ Where:
 - `game-offset-x` - The X offset of your game window (e.g., 100). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
 - `game-offset-y` - The Y offset of your game window (e.g., 100). This is optional and it's only relevant when your game window doesn't match the capture device resolution (see [Setting up a Virtual Camera](#setting-up-a-virtual-camera)).
 - `path-to-song-manifest` - The file system path to your song manifest (see [Song Manifest](#song-manifest)).
+- `song-manifest-type` - The type of song manifest. Supported values: `local` and `youtube` (defaults to `local`).
+
+## GUI
+
+The tool has a GUI to help you change the current state (song) in case you need it for whatever reason. This can be helpful if you run into a bug (e.g., some transition failed). In this situation, you can use the GUI to manually set the state, allowing you to continue listening to all the songs for the remainder of your run. If you do find a bug though, make sure you report it so it can hopefully be fixed.
 
 ## Setting up a Virtual Camera
 
-Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recongition accordingly.
+Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recognition accordingly.
 
 Note that this is only needed because you will be recording/streaming your speedrun. If you weren't, you could just use the capture card output directly using this tool.
 
@@ -131,6 +128,22 @@ ending-theme=C:\\path\\to\\ending-theme.wav
 ```
 
 I also provide experimental support for Youtube backed songs. You can use the `-st youtube` option to use the youtube player. The manifest is the same, but with youtube URLs rather than local file URIs.
+
+## Development
+
+You need JDK 11 and Maven installed.
+
+To package the tool, use:
+
+```
+mvn clean package
+```
+
+Afterwards, you can run it with:
+
+```
+java -jar target\pokemon-bdsp-automusic-jar-with-dependencies.jar -d <device-number> -w <device-width> -h <device-height> -gw <game-width> -gh <game-height> -s <path-to-song-manifest>
+```
 
 ## Authors
 
