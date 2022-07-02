@@ -4,7 +4,7 @@ A tool to auto play Pokemon BDSP songs depending on where you are currently in t
 
 The tool uses OpenCV for the image recognition stuff.
 
-Here's a small demo showing how it works: https://www.youtube.com/watch?v=H779VGMMtD0
+Here's a demo showing how it works: https://www.youtube.com/watch?v=PgHiY_KTaB0
 
 ## Motivation
 
