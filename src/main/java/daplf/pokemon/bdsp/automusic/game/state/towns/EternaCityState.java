@@ -35,7 +35,7 @@ public class EternaCityState extends TownState {
 
     private boolean isGymWall(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 180, 520, 240, 680);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.GARDENIA_GYM_WALL) >= 0.9;
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.GARDENIA_GYM_WALL) >= 0.8;
         submat.release();
         return result;
     }

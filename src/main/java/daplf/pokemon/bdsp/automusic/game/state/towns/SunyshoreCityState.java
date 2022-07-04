@@ -16,7 +16,7 @@ public class SunyshoreCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_222) >= 0.95) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_222) >= 0.97) {
             setNextState(new Route222State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_223) >= 0.95) {
             setNextState(new Route223State());
