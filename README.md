@@ -38,6 +38,8 @@ Where:
 
 The tool has a GUI to help you change the current state (song) in case you need it for whatever reason. This can be helpful if you run into a bug (e.g., some transition failed). In this situation, you can use the GUI to manually set the state, allowing you to continue listening to all the songs for the remainder of your run. If you do find a bug though, make sure you report it so it can hopefully be fixed.
 
+Please keep in mind that using one of the buttons will change the state, which means any possible transitions from that state to the next ones will still happen. As such, if you set the wrong state for a location, unexpected transitions may still occur depending on whatever is on screen. For example, if you set the battle state while near a cave and you enter the cave, the battle state will end (because the battle state ends whenever you get a black screen).
+
 ## Setting up a Virtual Camera
 
 Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recognition accordingly.
