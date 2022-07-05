@@ -38,6 +38,8 @@ public class StateIndicators {
 
     public static final Mat ROUTE_203 = ImageUtils.getImageResource("route-203.png");
 
+    public static final Mat ROUTE_203_3 = ImageUtils.getImageResource("route-203-3.png");
+
     public static final Mat RIVAL_ROUTE_203 = ImageUtils.getImageResource("rival-route-203.png");
 
     public static final Mat OREBURGH_GATE = ImageUtils.getImageResource("oreburgh-gate.png");
@@ -57,6 +59,8 @@ public class StateIndicators {
     public static final Mat PROFESSOR_ROWAN_JUBILIFE = ImageUtils.getImageResource("professor-rowan-jubilife.png");
 
     public static final Mat ROUTE_204 = ImageUtils.getImageResource("route-204.png");
+
+    public static final Mat ROUTE_204_4 = ImageUtils.getImageResource("route-204-4.png");
 
     public static final Mat RAVAGED_PATH = ImageUtils.getImageResource("ravaged-path.png");
 

@@ -20,9 +20,9 @@ public class JubilifeCityState extends TownState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_202) >= 0.97) {
             setNextState(new Route202State());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_203) >= 0.96) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_203_3) >= 0.95) {
             setNextState(new Route203State());
-        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_204) >= 0.95) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_204_4) >= 0.95) {
             setNextState(new Route204State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_218) >= 0.95) {
             setNextState(new Route218State());
