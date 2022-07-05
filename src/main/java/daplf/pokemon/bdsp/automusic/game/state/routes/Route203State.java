@@ -22,7 +22,7 @@ public class Route203State extends FlyableState {
             setNextState(new JubilifeCityState());
         } else if (isBattleGrass(frame)) {
             setNextState(new WildBattleState(() -> new Route203State()));
-        } else if (fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.OREBURGH_GATE) >= 0.95) {
             setNextState(new OreburghGateState());
         } else if (isRival(frame)) {
             setNextState(new RivalPreBattleState(this, () -> new Route203State()));
