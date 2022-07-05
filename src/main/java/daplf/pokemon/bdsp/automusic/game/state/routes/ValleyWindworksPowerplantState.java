@@ -11,14 +11,11 @@ import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
 public class ValleyWindworksPowerplantState extends State {
 
-    private static boolean encounteredFirstGrunt = false;
-
     @Override
     public void processFrame(final Mat frame) {
         if (isValleyWindworksSign(frame)) {
             setNextState(new ValleyWindworksState());
-        } else if (!encounteredFirstGrunt && fadedIn() && ImageUtils.isBlackScreenFrame(frame)) {
-            encounteredFirstGrunt = true;
+        } else if (isBattleGalacticGrunt(frame)) {
             setNextState(new GalacticGruntBattleState(() -> new ValleyWindworksPowerplantState()));
         } else if (isBattleGalacticCommander(frame)) {
             setNextState(new GalacticCommanderBattleState(() -> new ValleyWindworksPowerplantState()));

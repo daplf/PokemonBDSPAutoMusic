@@ -42,6 +42,8 @@ public class StateIndicators {
 
     public static final Mat RIVAL_ROUTE_203 = ImageUtils.getImageResource("rival-route-203.png");
 
+    public static final Mat RIVAL_ROUTE_203_UP = ImageUtils.getImageResource("rival-route-203-up.png");
+
     public static final Mat OREBURGH_GATE = ImageUtils.getImageResource("oreburgh-gate.png");
 
     public static final Mat BATTLE_CAVE = ImageUtils.getImageResource("battle-cave.png");
@@ -72,7 +74,9 @@ public class StateIndicators {
 
     public static final Mat VALLEY_WINDWORKS = ImageUtils.getImageResource("valley-windworks.png");
 
-    public static final Mat GRUNT_NAME_TAG = ImageUtils.getImageResource("grunt-name-tag.png");
+    public static final Mat VALLEY_WINDWORKS_FLOOR = ImageUtils.getImageResource("valley-windworks-floor.png");
+
+    public static final Mat VALLEY_WINDWORKS_LAMP = ImageUtils.getImageResource("valley-windworks-lamp.png");
 
     public static final Mat BATTLE_GALACTIC_COMMANDER = ImageUtils.getImageResource("battle-galactic-commander.png");
 

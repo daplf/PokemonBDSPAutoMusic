@@ -37,9 +37,10 @@ public class Route203State extends FlyableState {
     }
 
     private boolean isRival(final Mat frame) {
-        Mat submat = ImageUtils.getProportionalSubmat(frame, 110, 730, 840, 1280);
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 70, 730, 840, 1280);
         boolean result = ImageUtils.matchTemplate(submat, StateIndicators.RIVAL_ROUTE_203) >= 0.8;
+        boolean result2 = ImageUtils.matchTemplate(submat, StateIndicators.RIVAL_ROUTE_203_UP) >= 0.8;
         submat.release();
-        return result;
+        return result || result2;
     }
 }
