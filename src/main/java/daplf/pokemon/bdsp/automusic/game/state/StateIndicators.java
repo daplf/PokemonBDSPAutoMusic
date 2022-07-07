@@ -112,7 +112,11 @@ public class StateIndicators {
 
     public static final Mat ROUTE_210 = ImageUtils.getImageResource("route-210.png");
 
+    public static final Mat ROUTE_210_0 = ImageUtils.getImageResource("route-210-0.png");
+
     public static final Mat ROUTE_215 = ImageUtils.getImageResource("route-215.png");
+
+    public static final Mat ROUTE_215_15 = ImageUtils.getImageResource("route-215-15.png");
 
     public static final Mat VEILSTONE_CITY = ImageUtils.getImageResource("veilstone-city.png");
 
