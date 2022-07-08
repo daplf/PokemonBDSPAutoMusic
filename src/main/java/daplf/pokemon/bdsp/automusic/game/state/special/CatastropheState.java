@@ -23,7 +23,7 @@ public class CatastropheState extends State {
     }
 
     private boolean isBrokenColumn(final Mat frame) {
-        Mat submat = ImageUtils.getProportionalSubmat(frame, 155, 685, 1275, 1620);
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 0, 128, 1050, 1200);
         boolean result = ImageUtils.matchTemplate(submat, StateIndicators.SPEAR_PILLAR_BROKEN_COLUMN) >= 0.8;
         submat.release();
         return result;
