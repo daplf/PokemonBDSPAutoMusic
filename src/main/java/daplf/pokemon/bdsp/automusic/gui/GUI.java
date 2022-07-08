@@ -9,12 +9,16 @@ import daplf.pokemon.bdsp.automusic.game.GameManager;
 import daplf.pokemon.bdsp.automusic.game.music.Songs;
 import daplf.pokemon.bdsp.automusic.game.state.State;
 import daplf.pokemon.bdsp.automusic.game.state.battles.CynthiaBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.CynthiaPreBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.Cyrus2PreBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.DialgaPalkiaBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.EliteFourBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticBossBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticCommanderBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GalacticGruntBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.GymLeaderBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.MAndJPostBattleState;
+import daplf.pokemon.bdsp.automusic.game.state.battles.MAndJPreBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.RivalBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.TrainerBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.battles.WildBattleState;
@@ -24,6 +28,7 @@ import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaElevatorRoomState
 import daplf.pokemon.bdsp.automusic.game.state.buildings.BerthaRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.ByronGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.CandiceGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.CynthiaElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FantinaGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintRoomState;
@@ -69,7 +74,11 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.ValleyWindworksState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValorLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.VerityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.VictoryRoadState;
+import daplf.pokemon.bdsp.automusic.game.state.special.CatastropheState;
+import daplf.pokemon.bdsp.automusic.game.state.special.CongratulationsState;
 import daplf.pokemon.bdsp.automusic.game.state.special.CreditsState;
+import daplf.pokemon.bdsp.automusic.game.state.special.LakeLegendariesAppearState;
+import daplf.pokemon.bdsp.automusic.game.state.special.LegendaryAppearsState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CanalaveCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CelesticTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.EternaCityState;
@@ -188,6 +197,8 @@ public class GUI extends Application {
         new MapLocationButton("Flint", FlintRoomState::new, 1200, 220, 70, 20),
         new MapLocationButton("Elevator", LucianElevatorRoomState::new, 1200, 190, 70, 20),
         new MapLocationButton("Lucian", LucianRoomState::new, 1200, 160, 70, 20),
+        new MapLocationButton("Elevator", CynthiaElevatorRoomState::new, 1200, 130, 70, 20),
+        new MapLocationButton("Cynthia", CynthiaPreBattleState::new, 1200, 100, 70, 20),
 
         // Battles
         new MapLocationButton("Wild", () -> {
@@ -236,7 +247,16 @@ public class GUI extends Application {
         new MapLocationButton("Volkner's\nGym", VolknerGymState::new, 1220, 800, 90, 40),
         
         // Special
-        new MapLocationButton("Credits", CreditsState::new, 1420, 20, 70, 40)
+        new MapLocationButton("Credits", CreditsState::new, 1420, 20, 70, 40),
+        new MapLocationButton("Congratulations", CongratulationsState::new, 1420, 70, 70, 40),
+        new MapLocationButton("Cyrus 2", () -> new GalacticBossBattleState(() -> new SpearPillarState()), 1420, 120, 70, 40),
+        new MapLocationButton("Cyrus 2\nPre Battle", Cyrus2PreBattleState::new, 1420, 170, 70, 40),
+        new MapLocationButton("Lake Legendaries\nAppear", LakeLegendariesAppearState::new, 1420, 220, 70, 40),
+        new MapLocationButton("M & J\nPost Battle", MAndJPostBattleState::new, 1420, 270, 70, 40),
+        new MapLocationButton("M & J", () -> new GalacticCommanderBattleState(() -> new MAndJPostBattleState()), 1420, 320, 70, 40),
+        new MapLocationButton("M & J\nPre Battle", MAndJPreBattleState::new, 1420, 370, 70, 40),
+        new MapLocationButton("Catastrophe", CatastropheState::new, 1420, 420, 70, 40),
+        new MapLocationButton("Legendary\nAppears", LegendaryAppearsState::new, 1420, 470, 70, 40)
     );
 
     private static String songManifestPath;
