@@ -72,6 +72,8 @@ public class StateIndicators {
 
     public static final Mat ROUTE_205 = ImageUtils.getImageResource("route-205.png");
 
+    public static final Mat ROUTE_205_5 = ImageUtils.getImageResource("route-205-5.png");
+
     public static final Mat VALLEY_WINDWORKS = ImageUtils.getImageResource("valley-windworks.png");
 
     public static final Mat VALLEY_WINDWORKS_FLOOR = ImageUtils.getImageResource("valley-windworks-floor.png");
@@ -93,6 +95,8 @@ public class StateIndicators {
     public static final Mat BATTLE_GALACTIC = ImageUtils.getImageResource("battle-galactic.png");
 
     public static final Mat ROUTE_206 = ImageUtils.getImageResource("route-206.png");
+
+    public static final Mat ROUTE_206_6 = ImageUtils.getImageResource("route-206-6.png");
 
     public static final Mat ROUTE_207 = ImageUtils.getImageResource("route-207.png");
 
