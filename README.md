@@ -16,6 +16,8 @@ This is currently just a prototype. I have only tested it on Windows 10 and usin
 
 ## Usage
 
+If you have no dev experience, take a look at [this guide](https://github.com/daplf/PokemonBDSPAutoMusic/wiki/Beginner-Setup-Guide). Otherwise, carry on.
+
 You need Java 11+ to use the tool. You can then download the [latest release](https://github.com/daplf/PokemonBDSPAutoMusic/releases) (the JAR file) and run:
 
 ```
