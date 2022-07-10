@@ -32,6 +32,7 @@ public class MusicUtils {
         songManifest.put(Songs.POKE_MART, properties.getProperty("poke-mart"));
         songManifest.put(Songs.POKEMON_LAB, properties.getProperty("pokemon-lab"));
         songManifest.put(Songs.BATTLE_TRAINER, properties.getProperty("battle-trainer"));
+        songManifest.put(Songs.VICTORY_TRAINER, properties.getProperty("victory-trainer"));
         songManifest.put(Songs.JUBILIFE_CITY_DAY, properties.getProperty("jubilife-city-day"));
         songManifest.put(Songs.JUBILIFE_CITY_NIGHT, properties.getProperty("jubilife-city-night"));
         songManifest.put(Songs.ROUTE_203_DAY, properties.getProperty("route-203-day"));
@@ -42,7 +43,9 @@ public class MusicUtils {
         songManifest.put(Songs.OREBURGH_CITY_NIGHT, properties.getProperty("oreburgh-city-night"));
         songManifest.put(Songs.POKEMON_GYM, properties.getProperty("pokemon-gym"));
         songManifest.put(Songs.BATTLE_GYM_LEADER, properties.getProperty("battle-gym-leader"));
+        songManifest.put(Songs.VICTORY_GYM_LEADER, properties.getProperty("victory-gym-leader"));
         songManifest.put(Songs.BATTLE_GALACTIC_GRUNT, properties.getProperty("battle-galactic-grunt"));
+        songManifest.put(Songs.VICTORY_GALACTIC, properties.getProperty("victory-galactic"));
         songManifest.put(Songs.FLOAROMA_TOWN_DAY, properties.getProperty("floaroma-town-day"));
         songManifest.put(Songs.FLOAROMA_TOWN_NIGHT, properties.getProperty("floaroma-town-night"));
         songManifest.put(Songs.ROUTE_205_DAY, properties.getProperty("route-205-day"));
@@ -89,8 +92,10 @@ public class MusicUtils {
         songManifest.put(Songs.DECISIVE_BATTLE, properties.getProperty("decisive-battle"));
         songManifest.put(Songs.ELITE_FOUR_APPEARS, properties.getProperty("elite-four-appears"));
         songManifest.put(Songs.BATTLE_ELITE_FOUR, properties.getProperty("battle-elite-four"));
+        songManifest.put(Songs.VICTORY_ELITE_FOUR, properties.getProperty("victory-elite-four"));
         songManifest.put(Songs.CYNTHIA_THEME, properties.getProperty("cynthia-theme"));
         songManifest.put(Songs.BATTLE_CHAMPION, properties.getProperty("battle-champion"));
+        songManifest.put(Songs.VICTORY_CHAMPION, properties.getProperty("victory-champion"));
         songManifest.put(Songs.HALL_OF_FAME, properties.getProperty("hall-of-fame"));
         songManifest.put(Songs.CONGRATULATIONS_HALL_OF_FAME, properties.getProperty("congratulations-hall-of-fame"));
         songManifest.put(Songs.ENDING_THEME, properties.getProperty("ending-theme"));

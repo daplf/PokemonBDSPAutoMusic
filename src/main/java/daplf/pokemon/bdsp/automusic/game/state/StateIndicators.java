@@ -34,6 +34,8 @@ public class StateIndicators {
 
     public static final Mat BATTLE_TRAINER_POKEBALL_RED = ImageUtils.getImageResource("battle-trainer-pokeball-red.png");
 
+    public static final Mat YOU_DEFEATED = ImageUtils.getImageResource("you-defeated.png");
+
     public static final Mat JUBILIFE_CITY = ImageUtils.getImageResource("jubilife-city.png");
 
     public static final Mat ROUTE_203 = ImageUtils.getImageResource("route-203.png");
