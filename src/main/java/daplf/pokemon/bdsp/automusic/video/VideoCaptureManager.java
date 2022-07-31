@@ -29,6 +29,7 @@ public class VideoCaptureManager {
         if (videoCapture.retrieve(image)) {
             return image;
         } else {
+            image.release();
             return null;
         }
     }
