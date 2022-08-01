@@ -14,7 +14,7 @@ If you've ever done/watched a Pokemon BDSP speedrun, you've certainly noticed th
 
 This is currently just a prototype. I have only tested it on Windows 10 and using an Elgato HD60 S+ capture card. A minimal version of the entire game is covered, but it has not been thoroughly tested. It was built with the Kadachar route in mind, which means only things that are used by this route are considered for now. Other things may or may not work. I also left out some events for now (either because they were not that relevant for a first release or because they were very difficult to include).
 
-**Note**: Any future work (apart from bug fixes and small features) will be done only when requested. If there is something you need that is currently not in the tool (e.g., a missing route) feel free to request this and I can work on it (assuming it's doable).
+**Note**: Any future work (apart from bug fixes and small features) will be done only when requested. If there is something you need that is currently not in the tool (e.g., a missing route) feel free to request it and I will try to find time to work on it (assuming it's doable).
 
 ## Usage
 
