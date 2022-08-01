@@ -44,7 +44,9 @@ Please keep in mind that using one of the buttons will change the state, which m
 
 ## Setting up a Virtual Camera
 
-Since you can't use the capture card with multiple apps at the same time, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this (although I've only tested it with Streamlabs). Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recognition accordingly.
+Some capture cards cannot be used by multiple apps. In this scenario, you'll most likely need to set up some kind of virtual camera. Streamlabs and OBS support this. Streamlabs provides a Virtual Webcam feature (needs to be installed) that allows a virtual camera to be created based on your current scene. OBS has something similar. However, if you use OBS, make sure you use the plugin instead of the built-in virtual camera, since the latter doesn't seem to work.
+
+If your game window doesn't occupy the entire scene (for example, because you also have splits on it), you can use the `-gw`, `-gh`, `-gx` and `-gy` command line options to specify the resolution and location of the game window inside the scene. The tool will then resize the templates used for image recognition accordingly.
 
 Note that this is only needed because you will be recording/streaming your speedrun. If you weren't, you could just use the capture card output directly using this tool.
 
