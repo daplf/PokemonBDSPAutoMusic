@@ -21,6 +21,7 @@
         <commons.cli.version>1.5.0</commons.cli.version>
         <commons.io.version>2.11.0</commons.io.version>
         <javafx.version>11.0.2</javafx.version>
+        <logback.version>1.4.0</logback.version>
     </properties>
 
     <dependencies>
@@ -38,15 +39,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
 
         <dependency>

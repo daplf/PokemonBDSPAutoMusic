@@ -31,6 +31,7 @@ public class ImageUtils {
 
             MinMaxLocResult mmr = Core.minMaxLoc(result);
             double matchResult = mmr.maxVal;
+            log.debug("Checking match template. Result: {}", matchResult);
             result.release();
             return matchResult;
         } else {
@@ -55,7 +56,9 @@ public class ImageUtils {
     public static boolean isBlackScreen(final Mat image) {
         Mat imageGray = new Mat();
         Imgproc.cvtColor(image, imageGray, Imgproc.COLOR_BGR2GRAY);
-        boolean result = Core.countNonZero(imageGray) == 0;
+        int nonBlackPixels = Core.countNonZero(imageGray);
+        log.debug("Checking black screen. Non black pixels: {}", nonBlackPixels);
+        boolean result = nonBlackPixels == 0;
         imageGray.release();
         return result;
     }

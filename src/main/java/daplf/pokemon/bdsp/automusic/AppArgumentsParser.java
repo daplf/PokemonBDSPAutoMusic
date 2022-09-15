@@ -6,6 +6,10 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 
 public class AppArgumentsParser {
 
@@ -26,6 +30,7 @@ public class AppArgumentsParser {
         options.addOption(Option.builder("gy").longOpt("game-offset-y").desc("the Y offset of the game inside the output device").hasArg(true).required(false).build());
         options.addOption(Option.builder("s").longOpt("song-manifest").desc("the song manifest path").hasArg(true).required(true).build());
         options.addOption(Option.builder("st").longOpt("song-manifest-type").desc("the song manifest type (local/youtube)").hasArg(true).required(false).build());
+        options.addOption(Option.builder("de").longOpt("debug").desc("output debug logging").build());
     }
 
     public AppArguments parseArguments(final String[] args) {
@@ -41,6 +46,15 @@ public class AppArgumentsParser {
             int gameOffsetY = Integer.parseInt(line.getOptionValue("gy", String.valueOf(0)));
             String songManifestPath = line.getOptionValue("s");
             String songManifestType = line.getOptionValue("st", "local");
+            boolean debug = line.hasOption("de");
+
+            Logger root = (Logger) LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+            
+            if (debug) {
+                root.setLevel(Level.DEBUG);
+            } else {
+                root.setLevel(Level.INFO);
+            }
 
             return new AppArguments(device, width, height, gameWidth, gameHeight, gameOffsetX, gameOffsetY, songManifestPath, songManifestType);
         } catch (final ParseException ex) {
