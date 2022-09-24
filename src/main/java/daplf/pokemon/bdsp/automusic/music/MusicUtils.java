@@ -39,6 +39,7 @@ public class MusicUtils {
         songManifest.put(Songs.ROUTE_203_NIGHT, properties.getProperty("route-203-night"));
         songManifest.put(Songs.BATTLE_RIVAL, properties.getProperty("battle-rival"));
         songManifest.put(Songs.OREBURGH_GATE, properties.getProperty("oreburgh-gate"));
+        songManifest.put(Songs.OREBURGH_MINE, properties.getProperty("oreburgh-mine"));
         songManifest.put(Songs.OREBURGH_CITY_DAY, properties.getProperty("oreburgh-city-day"));
         songManifest.put(Songs.OREBURGH_CITY_NIGHT, properties.getProperty("oreburgh-city-night"));
         songManifest.put(Songs.POKEMON_GYM, properties.getProperty("pokemon-gym"));

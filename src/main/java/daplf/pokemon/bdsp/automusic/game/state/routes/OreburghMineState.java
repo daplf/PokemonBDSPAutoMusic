@@ -22,6 +22,6 @@ public class OreburghMineState extends State {
 
     @Override
     public Songs getSong() {
-        return Songs.OREBURGH_GATE;
+        return Songs.OREBURGH_MINE;
     }
 }
