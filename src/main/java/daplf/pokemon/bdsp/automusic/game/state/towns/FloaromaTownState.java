@@ -32,7 +32,7 @@ public class FloaromaTownState extends TownState {
     }
 
     private boolean isExclamationMarks(final Mat frame) {
-        Mat submat = ImageUtils.getProportionalSubmat(frame, 50, 225, 850, 1280);
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 50, 225, 350, 1280);
         boolean result = ImageUtils.matchTemplate(submat, StateIndicators.FLOAROMA_EXCLAMATION_MARKS) >= 0.9;
         submat.release();
         return result;
