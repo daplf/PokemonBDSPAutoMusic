@@ -7,6 +7,7 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.RivalBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.WakeGymState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.Route212State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route213State;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
@@ -16,7 +17,9 @@ public class PastoriaCityState extends TownState {
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_213) >= 0.95) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_212) >= 0.95) {
+            setNextState(new Route212State());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_213) >= 0.95) {
             setNextState(new Route213State());
         } else if (isGym(frame)) {
             setNextState(new WakeGymState());

@@ -123,6 +123,7 @@ legendary-appears=C:\\path\\to\\legendary-appears.wav
 catastrophe=C:\\path\\to\\catastrophe.wav
 lake-caverns=C:\\path\\to\\lake-caverns.wav
 battle-dialga-palkia=C:\\path\\to\\battle-dialga-palkia.wav
+battle-azelf-mesprit-uxie=C:\\path\\to\\battle-azelf-mesprit-uxie.wav
 sunyshore-city-day=C:\\path\\to\\sunyshore-city-day.wav
 sunyshore-city-night=C:\\path\\to\\sunyshore-city-day.wav
 victory-road=C:\\path\\to\\victory-road.wav
@@ -138,6 +139,12 @@ victory-champion=C:\\path\\to\\victory-champion.wav
 hall-of-fame=C:\\path\\to\\hall-of-fame.wav
 congratulations-hall-of-fame=C:\\path\\to\\congratulations-hall-of-fame.wav
 ending-theme=C:\\path\\to\\ending-theme.wav
+fight-area-day=C:\\path\\to\\fight-area-day.wav
+fight-area-night=C:\\path\\to\\fight-area-night.wav
+route-225-day=C:\\path\\to\\route-225-day.wav
+route-225-night=C:\\path\\to\\route-225-night.wav
+stark-mountain=C:\\path\\to\\stark-mountain.wav
+battle-legendary=C:\\path\\to\\battle-legendary.wav
 ```
 
 I also provide experimental support for Youtube backed songs. You can use the `-st youtube` option to use the youtube player. The manifest is the same, but with youtube URLs rather than local file URIs.

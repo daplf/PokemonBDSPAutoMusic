@@ -85,6 +85,7 @@ public class MusicUtils {
         songManifest.put(Songs.CATASTROPHE, properties.getProperty("catastrophe"));
         songManifest.put(Songs.LAKE_CAVERNS, properties.getProperty("lake-caverns"));
         songManifest.put(Songs.BATTLE_DIALGA_PALKIA, properties.getProperty("battle-dialga-palkia"));
+        songManifest.put(Songs.BATTLE_AZELF_MESPRIT_UXIE, properties.getProperty("battle-azelf-mesprit-uxie"));
         songManifest.put(Songs.SUNYSHORE_CITY_DAY, properties.getProperty("sunyshore-city-day"));
         songManifest.put(Songs.SUNYSHORE_CITY_NIGHT, properties.getProperty("sunyshore-city-night"));
         songManifest.put(Songs.VICTORY_ROAD, properties.getProperty("victory-road"));
@@ -100,6 +101,12 @@ public class MusicUtils {
         songManifest.put(Songs.HALL_OF_FAME, properties.getProperty("hall-of-fame"));
         songManifest.put(Songs.CONGRATULATIONS_HALL_OF_FAME, properties.getProperty("congratulations-hall-of-fame"));
         songManifest.put(Songs.ENDING_THEME, properties.getProperty("ending-theme"));
+        songManifest.put(Songs.FIGHT_AREA_DAY, properties.getProperty("fight-area-day"));
+        songManifest.put(Songs.FIGHT_AREA_NIGHT, properties.getProperty("fight-area-night"));
+        songManifest.put(Songs.ROUTE_225_DAY, properties.getProperty("route-225-day"));
+        songManifest.put(Songs.ROUTE_225_NIGHT, properties.getProperty("route-225-night"));
+        songManifest.put(Songs.STARK_MOUNTAIN, properties.getProperty("stark-mountain"));
+        songManifest.put(Songs.BATTLE_LEGENDARY, properties.getProperty("battle-legendary"));
 
         return songManifest;
     }

@@ -9,6 +9,12 @@ import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 
 public class LakeValorState extends FlyableState {
 
+    private static int noVisits = 0;
+
+    public LakeValorState() {
+        noVisits++;
+    }
+
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
@@ -22,6 +28,10 @@ public class LakeValorState extends FlyableState {
 
     @Override
     public Songs getSong() {
-        return Songs.GALACTIC_ETERNA_BUILDING;
+        if (noVisits < 2) {
+            return Songs.GALACTIC_ETERNA_BUILDING;
+        } else {
+            return Songs.LAKE;
+        }
     }
 }

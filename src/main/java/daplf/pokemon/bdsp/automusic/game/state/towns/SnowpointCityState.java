@@ -17,6 +17,8 @@ public class SnowpointCityState extends TownState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.ACUITY_LAKEFRONT) >= 0.95) {
             setNextState(new AcuityLakefrontState());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.FIGHT_AREA) >= 0.95) {
+            setNextState(new FightAreaState());
         } else if (isGym(frame)) {
             setNextState(new CandiceGymState());
         }

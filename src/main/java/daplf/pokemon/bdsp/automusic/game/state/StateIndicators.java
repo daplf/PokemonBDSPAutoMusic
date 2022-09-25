@@ -200,6 +200,8 @@ public class StateIndicators {
 
     public static final Mat CANDICE_GYM_STATUE = ImageUtils.getImageResource("candice-gym-statue.png");
 
+    public static final Mat BATTLE_GALACTIC_LAKE = ImageUtils.getImageResource("battle-galactic-lake.png");
+
     public static final Mat GALACTIC_HQ_OUTSIDE_CONTAINER = ImageUtils.getImageResource("galactic-hq-outside-container.png");
 
     public static final Mat GALACTIC_HQ_LAMP = ImageUtils.getImageResource("galactic-hq-lamp.png");
@@ -227,6 +229,8 @@ public class StateIndicators {
     public static final Mat CYRUS_EYE_UPSET = ImageUtils.getImageResource("cyrus-eye-upset.png");
 
     public static final Mat SPEAR_PILLAR_BROKEN_LEFT_COLUMN = ImageUtils.getImageResource("spear-pillar-broken-left-column.png");
+
+    public static final Mat AZELF_CRY = ImageUtils.getImageResource("azelf-cry.png");
 
     public static final Mat ROUTE_222 = ImageUtils.getImageResource("route-222.png");
 
@@ -265,4 +269,32 @@ public class StateIndicators {
     public static final Mat LUCIAN_CUTSCENE = ImageUtils.getImageResource("lucian-cutscene.png");
 
     public static final Mat STARAPTOR_BANNER = ImageUtils.getImageResource("staraptor-banner.png");
+
+    public static final Mat LAKE_VERITY = ImageUtils.getImageResource("lake-verity.png");
+
+    public static final Mat VERITY_CAVERN = ImageUtils.getImageResource("verity-cavern.png");
+
+    public static final Mat ACUITY_CAVERN = ImageUtils.getImageResource("acuity-cavern.png");
+
+    public static final Mat UXIE_CRY = ImageUtils.getImageResource("uxie-cry.png");
+
+    public static final Mat BATTLE_FLINT = ImageUtils.getImageResource("battle-flint.png");
+
+    public static final Mat FIGHT_AREA = ImageUtils.getImageResource("fight-area.png");
+
+    public static final Mat ROUTE_225 = ImageUtils.getImageResource("route-225.png");
+
+    public static final Mat SURVIVAL_AREA = ImageUtils.getImageResource("survival-area.png");
+
+    public static final Mat ROUTE_226 = ImageUtils.getImageResource("route-226.png");
+
+    public static final Mat ROUTE_227 = ImageUtils.getImageResource("route-227.png");
+
+    public static final Mat STARK_MOUNTAIN = ImageUtils.getImageResource("stark-mountain.png");
+
+    public static final Mat STARK_MOUNTAIN_ROCKS = ImageUtils.getImageResource("stark-mountain-rocks.png");
+
+    public static final Mat STARK_MOUNTAIN_SIGN = ImageUtils.getImageResource("stark-mountain-sign.png");
+
+    public static final Mat HEATRAN_CRY = ImageUtils.getImageResource("heatran-cry.png");
 }

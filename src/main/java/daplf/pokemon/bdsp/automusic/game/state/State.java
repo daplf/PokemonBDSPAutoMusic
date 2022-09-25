@@ -43,7 +43,7 @@ public abstract class State {
 
     protected boolean isBattleWater(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 650, 1080, 0, 800);
-        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_WATER) >= 0.8;
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_WATER) >= 0.7;
         submat.release();
         return result;
     }

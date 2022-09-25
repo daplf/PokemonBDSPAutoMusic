@@ -10,6 +10,7 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.PokemonLeagueState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CanalaveCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.CelesticTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.EternaCityState;
+import daplf.pokemon.bdsp.automusic.game.state.towns.FightAreaState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.FloaromaTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.HearthomeCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.JubilifeCityState;
@@ -19,6 +20,7 @@ import daplf.pokemon.bdsp.automusic.game.state.towns.SandgemTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SnowpointCityState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SolaceonTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.SunyshoreCityState;
+import daplf.pokemon.bdsp.automusic.game.state.towns.SurvivalAreaState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.TwinleafTownState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.VeilstoneCityState;
 import lombok.RequiredArgsConstructor;
@@ -60,6 +62,10 @@ public class FlyState extends FlyableState {
             setNextState(new SunyshoreCityState());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.POKEMON_LEAGUE) >= 0.95) {
             setNextState(new PokemonLeagueState());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.FIGHT_AREA) >= 0.95) {
+            setNextState(new FightAreaState());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SURVIVAL_AREA) >= 0.95) {
+            setNextState(new SurvivalAreaState());
         }
     }
 
