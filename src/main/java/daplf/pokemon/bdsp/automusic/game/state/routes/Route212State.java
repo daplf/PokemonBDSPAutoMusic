@@ -9,23 +9,21 @@ import daplf.pokemon.bdsp.automusic.game.state.battles.TrainerBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.special.FlyableState;
 import daplf.pokemon.bdsp.automusic.game.state.towns.HearthomeCityState;
 
-public class Route208State extends FlyableState {
+public class Route212State extends FlyableState {
 
     @Override
     public void processFrame(final Mat frame) {
         super.processFrame(frame);
 
-        if (StateUtils.matchAreaTitle(frame, StateIndicators.MOUNT_CORONET) >= 0.95) {
-            setNextState(new MountCoronetState());
-        } if (StateUtils.matchAreaTitle(frame, StateIndicators.HEARTHOME_CITY) >= 0.95) {
+        if (StateUtils.matchAreaTitle(frame, StateIndicators.HEARTHOME_CITY) >= 0.95) {
             setNextState(new HearthomeCityState());
         } else if (isBattleTrainer(frame)) {
-            setNextState(new TrainerBattleState(() -> new Route208State()));
+            setNextState(new TrainerBattleState(() -> new Route212State()));
         }
     }
 
     @Override
     public Songs getSong() {
-        return Songs.ROUTE_206_DAY;
+        return Songs.ROUTE_209_DAY;
     }
 }

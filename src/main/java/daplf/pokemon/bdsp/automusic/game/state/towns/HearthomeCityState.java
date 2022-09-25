@@ -9,6 +9,7 @@ import daplf.pokemon.bdsp.automusic.game.state.battles.RivalBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FantinaGymState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route208State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route209State;
+import daplf.pokemon.bdsp.automusic.game.state.routes.Route212State;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
 public class HearthomeCityState extends TownState {
@@ -21,6 +22,8 @@ public class HearthomeCityState extends TownState {
             setNextState(new Route208State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_209) >= 0.95) {
             setNextState(new Route209State());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_212) >= 0.95) {
+            setNextState(new Route212State());
         } else if (isBattleTrainer(frame)) {
             setNextState(new RivalBattleState(() -> new HearthomeCityState()));
         } else if (isGym(frame)) {

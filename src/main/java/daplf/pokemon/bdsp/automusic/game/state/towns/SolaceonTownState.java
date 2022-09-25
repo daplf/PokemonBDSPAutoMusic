@@ -7,6 +7,7 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route209State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route210State;
+import daplf.pokemon.bdsp.automusic.game.state.routes.SolaceonRuinsState;
 
 public class SolaceonTownState extends TownState {
 
@@ -18,6 +19,8 @@ public class SolaceonTownState extends TownState {
             setNextState(new Route209State());
         } else if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_210) >= 0.95) {
             setNextState(new Route210State());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.SOLACEON_RUINS) >= 0.95) {
+            setNextState(new SolaceonRuinsState());
         }
     }
 

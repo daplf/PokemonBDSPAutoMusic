@@ -41,6 +41,13 @@ public abstract class State {
         return result;
     }
 
+    protected boolean isBattleWater(final Mat frame) {
+        Mat submat = ImageUtils.getProportionalSubmat(frame, 650, 1080, 0, 800);
+        boolean result = ImageUtils.matchTemplate(submat, StateIndicators.BATTLE_WATER) >= 0.8;
+        submat.release();
+        return result;
+    }
+
     protected boolean isBattleTrainer(final Mat frame) {
         Mat submat = ImageUtils.getProportionalSubmat(frame, 200, 430, 0, 1000);
         boolean result = ImageUtils.matchTemplateSqDiff(submat, StateIndicators.BATTLE_TRAINER_POKEBALL_RED) <= 0.1;

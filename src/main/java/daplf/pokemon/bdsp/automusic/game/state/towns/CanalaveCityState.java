@@ -7,6 +7,7 @@ import daplf.pokemon.bdsp.automusic.game.state.StateIndicators;
 import daplf.pokemon.bdsp.automusic.game.state.StateUtils;
 import daplf.pokemon.bdsp.automusic.game.state.battles.RivalBattleState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.ByronGymState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.IronIslandState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route218State;
 import daplf.pokemon.bdsp.automusic.image.ImageUtils;
 
@@ -18,6 +19,8 @@ public class CanalaveCityState extends TownState {
 
         if (StateUtils.matchAreaTitle(frame, StateIndicators.ROUTE_218) >= 0.95) {
             setNextState(new Route218State());
+        } else if (StateUtils.matchAreaTitle(frame, StateIndicators.IRON_ISLAND) >= 0.95) {
+            setNextState(new IronIslandState());
         } else if (isBridgeCloseUp(frame)) {
             setNextState(new RivalBattleState(() -> new CanalaveCityState()));
         } else if (isGym(frame)) {

@@ -114,7 +114,11 @@ public class StateIndicators {
 
     public static final Mat LOST_TOWER = ImageUtils.getImageResource("lost-tower.png");
 
+    public static final Mat BATTLE_LOST_TOWER = ImageUtils.getImageResource("battle-lost-tower.png");
+
     public static final Mat SOLACEON_TOWN = ImageUtils.getImageResource("solaceon-town.png");
+
+    public static final Mat SOLACEON_RUINS = ImageUtils.getImageResource("solaceon-ruins.png");
 
     public static final Mat ROUTE_210 = ImageUtils.getImageResource("route-210.png");
 
@@ -160,7 +164,11 @@ public class StateIndicators {
 
     public static final Mat FANTINA_GYM_ELEVATOR_STRINGS = ImageUtils.getImageResource("fantina-gym-elevator-strings.png");
 
+    public static final Mat ROUTE_212 = ImageUtils.getImageResource("route-212.png");
+
     public static final Mat ROUTE_218 = ImageUtils.getImageResource("route-218.png");
+
+    public static final Mat BATTLE_WATER = ImageUtils.getImageResource("battle-water.png");
 
     public static final Mat CANALAVE_CITY = ImageUtils.getImageResource("canalave-city.png");
 
@@ -169,6 +177,12 @@ public class StateIndicators {
     public static final Mat BYRON_GYM_WALL = ImageUtils.getImageResource("byron-gym-wall.png");
 
     public static final Mat BYRON_GYM_ELEVATOR = ImageUtils.getImageResource("byron-gym-elevator.png");
+
+    public static final Mat IRON_ISLAND = ImageUtils.getImageResource("iron-island.png");
+
+    public static final Mat IRON_ISLAND_BARRELS = ImageUtils.getImageResource("iron-island-barrels.png");
+
+    public static final Mat IRON_ISLAND_CAVE_ENTRANCE = ImageUtils.getImageResource("iron-island-cave-entrance.png");
 
     public static final Mat ROUTE_211 = ImageUtils.getImageResource("route-211.png");
 

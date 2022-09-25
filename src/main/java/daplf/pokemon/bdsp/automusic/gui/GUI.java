@@ -34,6 +34,7 @@ import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.FlintRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.GalacticHqState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.GardeniaGymState;
+import daplf.pokemon.bdsp.automusic.game.state.buildings.LostTowerState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianElevatorRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.LucianRoomState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.MayleneGymState;
@@ -42,6 +43,7 @@ import daplf.pokemon.bdsp.automusic.game.state.buildings.VolknerGymState;
 import daplf.pokemon.bdsp.automusic.game.state.buildings.WakeGymState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.AcuityLakefrontState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.EternaForestState;
+import daplf.pokemon.bdsp.automusic.game.state.routes.IronIslandState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeValorState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.LakeVerityState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.MountCoronetNearTopState;
@@ -69,6 +71,7 @@ import daplf.pokemon.bdsp.automusic.game.state.routes.Route217State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route218State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route222State;
 import daplf.pokemon.bdsp.automusic.game.state.routes.Route223State;
+import daplf.pokemon.bdsp.automusic.game.state.routes.SolaceonRuinsState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.SpearPillarState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValleyWindworksState;
 import daplf.pokemon.bdsp.automusic.game.state.routes.ValorLakefrontState;
@@ -145,6 +148,7 @@ public class GUI extends Application {
         new MapLocationButton("Jubilife\nCity", JubilifeCityState::new, 170, 660, 70, 40),
         new MapLocationButton("Route\n218", Route218State::new, 100, 660, 60, 40),
         new MapLocationButton("Canalave\nCity", CanalaveCityState::new, 20, 660, 70, 40),
+        new MapLocationButton("Iron\nIsland", IronIslandState::new, 20, 300, 70, 40),
         new MapLocationButton("Route\n203", Route203State::new, 250, 660, 60, 40),
         new MapLocationButton("Oreburgh\nGate", OreburghGateState::new, 320, 660, 80, 40),
         new MapLocationButton("Oreburgh\nCity", OreburghCityState::new, 410, 660, 70, 40),
@@ -167,14 +171,16 @@ public class GUI extends Application {
         new MapLocationButton("Route\n208", Route208State::new, 630, 610, 60, 40),
         new MapLocationButton("Hearthome\nCity", HearthomeCityState::new, 700, 610, 70, 40),
         new MapLocationButton("Route\n209", Route209State::new, 785, 610, 60, 40),
+        new MapLocationButton("Lost\nTower", LostTowerState::new, 855, 610, 60, 40),
         new MapLocationButton("Solaceon\nTown", SolaceonTownState::new, 780, 560, 70, 40),
+        new MapLocationButton("Solaceon\nRuins", SolaceonRuinsState::new, 855, 560, 70, 40),
         new MapLocationButton("Route\n210", Route210State::new, 785, 460, 60, 90),
         new MapLocationButton("Route\n215", Route215State::new, 855, 490, 120, 40),
         new MapLocationButton("Veilstone\nCity", VeilstoneCityState::new, 985, 490, 70, 40),
         new MapLocationButton("Galactic\nHQ", GalacticHqState::new, 985, 440, 70, 40),
         new MapLocationButton("Route\n214", Route214State::new, 990, 540, 60, 90),
         new MapLocationButton("Valor\nLakefront", ValorLakefrontState::new, 985, 640, 70, 80),
-        new MapLocationButton("Lake\nValor", LakeValorState::new, 905, 650, 70, 40),
+        new MapLocationButton("Lake\nValor", LakeValorState::new, 905, 660, 70, 40),
         new MapLocationButton("Route\n213", Route213State::new, 935, 730, 120, 40),
         new MapLocationButton("Pastoria\nCity", PastoriaCityState::new, 855, 730, 70, 40),
         new MapLocationButton("Celestic\nTown", CelesticTownState::new, 700, 460, 70, 40),
