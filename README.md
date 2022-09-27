@@ -78,6 +78,7 @@ route-203-day=C:\\path\\to\\route-203-day.wav
 route-203-night=C:\\path\\to\\route-203-day.wav
 battle-rival=C:\\path\\to\\battle-rival.wav
 oreburgh-gate=C:\\path\\to\\oreburgh-gate.wav
+oreburgh-mine=C:\\path\\to\\oreburgh-mine.wav
 oreburgh-city-day=C:\\path\\to\\oreburgh-city-day.wav
 oreburgh-city-night=C:\\path\\to\\oreburgh-city-day.wav
 pokemon-gym=C:\\path\\to\\pokemon-gym.wav
